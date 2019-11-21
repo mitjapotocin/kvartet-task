@@ -1,0 +1,41 @@
+
+
+header {
+    a {
+        text-decoration: inherit;
+        color: inherit;
+    }
+    
+    h1 {
+        font-size: 82px;
+        color: white;
+        text-align: left;
+    }
+    
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: top;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+header::before {
+    content: "";
+    background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.1) 25%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header-content {
+    z-index: 1;
+}

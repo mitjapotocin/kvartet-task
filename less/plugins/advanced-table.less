@@ -1,0 +1,44 @@
+@prefix:at;
+
+.@{prefix}-container {
+	overflow-x: auto;
+
+	&.@{prefix}-is-scrollable {
+		.@{prefix}-fixed-table {
+			display: block;
+		}
+	}
+}
+.@{prefix}-responsive-table {
+	.@{prefix}-wrapper {
+		position: relative;
+		overflow: hidden;
+	}
+}
+.@{prefix}-table {
+	//background: #008080;
+}
+.@{prefix}-fixed-table {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index: 2;
+	display: none;
+	td,
+	th {
+		display: none;
+		&.at-fixed {
+			display: table-cell;
+		}
+	}
+}
+.@{prefix}-scrollable-table {
+	overflow-x: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.@{prefix}-cell-hidden {
+	display: none !important;
+}

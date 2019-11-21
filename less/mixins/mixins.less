@@ -1,0 +1,148 @@
+
+// fonts
+.local_webfont(@name, @filename, @dir:'../fonts/', @weight:normal, @style:normal, @fontVersion:'?v=1') {
+	font-family: @name;
+	src: ~"url(@{dir}@{filename}.eot?@{fontVersion})";
+	src: ~"url(@{dir}@{filename}.eot?#iefix)" format('embedded-opentype'),
+	 	 ~"url(@{dir}@{filename}.woff?@{fontVersion})" format('woff'),
+		 ~"url(@{dir}@{filename}.woff2?@{fontVersion})" format('woff2'),
+		 ~"url(@{dir}@{filename}.ttf?@{fontVersion})" format('truetype'),
+		 ~"url(@{dir}@{filename}.svg#@{name})" format('svg');
+	font-weight: @weight;
+	font-style: @style;
+}
+
+// gradients
+
+.horizontal(@startColor: @white, @endColor: @lightergrey) {
+	background-image: linear-gradient(to right, @startColor, @endColor);
+}
+
+.vertical(@startColor: @white, @endColor:  @lightergrey) {
+	background-image: linear-gradient(to bottom, @startColor, @endColor);
+}
+
+.directional(@startColor: @white, @endColor: @lightergrey, @deg: 45deg) {
+	background-image: linear-gradient(@deg, @startColor, @endColor);
+}
+
+// .rotate(VALUEdeg);
+
+.rotate(@deg) {
+	transform: rotate(@deg);
+}
+
+// .scale(VALUE);
+
+.scale(@ratio) {
+	transform: scale(@ratio);
+}
+
+// .skew(VALUE, VALUE);
+
+.skew(@x: 0, @y: 0) {
+	transform: skew(@x, @y);
+}
+
+// .translate(VALUE, VALUE)
+
+.translate(@x: 0, @y: 0) {
+	transform: translate(@x, @y);
+}
+
+.translate3d(@x: 0, @y: 0, @z: 0) {
+	transform: translate3d(@x, @y, @z);
+}
+
+.clearfix(){
+
+}
+.clearfix(@hard:false) when (@hard = false) {
+	overflow: hidden;
+}
+.clearfix(@hard:false) when (@hard = true) {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+.clearfix(@hard:false) when (@hard = old) {
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
+	.lt-ie8 & {
+		zoom: 1;
+	}
+}
+
+.ir() {
+	overflow: hidden;
+	text-indent: -999em;
+}
+
+// Hide from visual and speaking browsers
+
+.hidden() {
+	display: none !important;
+	visibility: hidden;
+}
+
+// Hide but maintain layout
+
+.invisible() {
+	visibility: hidden;
+}
+
+// .resize(VALUE) (none, both, horizontal, vertical, inherit)
+
+.resize(@direction: both) {
+	resize: @direction;
+	overflow: auto;
+}
+
+// .userselect(VALUE) (all, element, none, text)
+.user-select(@select) {
+	-webkit-user-select: @select;
+	-moz-user-select: @select;
+	-o-user-select: @select;
+	user-select: @select;
+}
+
+.remove-select-appearance() {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+.remove-tap-highlight() {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.placeholder-style(@style) {
+	&::-webkit-input-placeholder {
+		@style();
+	}
+	&:-moz-placeholder {
+		@style();
+	}
+	&::-moz-placeholder {
+		@style();
+	}
+	&:-ms-input-placeholder {
+		@style();
+	}
+}
+
+.autocomplete-style(@color, @backgroundColor) {
+	-webkit-box-shadow:0 0 0 300px @backgroundColor inset;
+	-webkit-text-fill-color:@color;
+}

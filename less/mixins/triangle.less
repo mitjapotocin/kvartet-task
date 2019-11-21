@@ -1,0 +1,44 @@
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction:T) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	box-sizing: content-box;
+}
+
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction:T) when (@direction = T),(@direction = t) {
+	@w2:(@w / 2);
+	border-width: 0 @w2 @h @w2;
+	border-color: transparent transparent @color transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = B),(@direction = b){
+	@w2:(@w / 2);
+	border-width: @h @w2 0 @w2;
+	border-color: @color transparent transparent transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = L),(@direction = l){
+	@h2:(@h / 2);
+	border-width: @h2 @w @h2 0;
+	border-color: transparent @color transparent transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = R),(@direction = r){
+	@h2:(@h / 2);
+	border-width: @h2 0 @h2 @w;
+	border-color: transparent transparent transparent @color;
+}
+
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = TL),(@direction = LT),(@direction = tl),(@direction = lt){
+	border-width: @h @w 0 0;
+	border-color: @color transparent transparent transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = TR),(@direction = RT),(@direction = tr),(@direction = rt){
+	border-width: 0 @w @h 0;
+	border-color: transparent @color transparent transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = BR),(@direction = RB),(@direction = br),(@direction = rb){
+	border-width: 0 0 @h @w;
+	border-color: transparent transparent @color transparent;
+}
+.triangle(@w:10px;@h:10px;@color:#bada55;@direction) when (@direction = BL),(@direction = LB),(@direction = bl),(@direction = lb){
+	border-width: @h 0 0  @w;
+	border-color: transparent transparent transparent @color;
+}
