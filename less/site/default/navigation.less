@@ -1,10 +1,11 @@
 nav {
     font-family: 'Poppins', sans-serif;
-    padding: 20px 0 20px 0;
+    padding: 22px 0 22px 0;
     width: 100%;
     top: 35px;
     color: #ffffff;
     position: absolute;
+    z-index: 99;
     @media @bp_max_768 {
         .hidden
     }
@@ -15,18 +16,35 @@ nav ul {
 }
 
 nav ul li {
-    line-height: 20px;
     font-size: 16px;
     float: left;
     margin-left: 24px;
     span {
-        .margin(5px)
+        .margin-l-r(5px)
     }
 }
 
+.nav-logo {
+    float: left;
+    opacity: 0;
+    img {
+        display: block;
+    }
+}
+
+
 .nav-fixed {
-    transition: background 0.6s;
+    transition-property: background, opacity;
+    transition-duration: 0.6s;
     position: fixed;
     top: 0;
     background: @main-green;
+    .nav-logo {
+        opacity: 1;
+    }
+}
+
+.nav-active {
+    border-bottom: 1px solid #ffffff;
+    z-index: 99;
 }

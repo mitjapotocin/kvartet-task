@@ -309,8 +309,8 @@ header {
   background-position-x: 50%;
   background-position-y: top;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   margin-bottom: 120px;
 }
@@ -318,10 +318,40 @@ header a {
   text-decoration: inherit;
   color: inherit;
 }
+header h3 {
+  font-weight: 300;
+  font-size: 28px;
+  color: #ffffff;
+}
+@media only screen and (max-width:767px) {
+  header h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width:479px) {
+  header h3 {
+    font-size: 18px;
+  }
+}
 header h1 {
   font-size: 82px;
-  color: white;
+  color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width:767px) {
+  header h1 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width:479px) {
+  header h1 {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-width:767px) {
+  header {
+    margin-bottom: 70px;
+  }
 }
 header::before {
   content: "";
@@ -335,13 +365,37 @@ header::before {
 .header-content {
   z-index: 1;
 }
+.header-big-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #173F35;
+  max-width: 45%;
+}
+.header-big-logo img {
+  padding: 20%;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.header-logo-bottom {
+  position: absolute;
+  bottom: 8%;
+}
+@media only screen and (max-width:767px) {
+  .header-logo-bottom {
+    margin-left: 16px;
+    margin-bottom: -5px;
+  }
+}
 nav {
   font-family: 'Poppins', sans-serif;
-  padding: 20px 0 20px 0;
+  padding: 22px 0 22px 0;
   width: 100%;
   top: 35px;
   color: #ffffff;
   position: absolute;
+  z-index: 99;
 }
 @media only screen and (max-width:767px) {
   nav {
@@ -353,19 +407,34 @@ nav ul {
   float: right;
 }
 nav ul li {
-  line-height: 20px;
   font-size: 16px;
   float: left;
   margin-left: 24px;
 }
 nav ul li span {
-  letter-spacing: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.nav-logo {
+  float: left;
+  opacity: 0;
+}
+.nav-logo img {
+  display: block;
 }
 .nav-fixed {
-  transition: background 0.6s;
+  transition-property: background, opacity;
+  transition-duration: 0.6s;
   position: fixed;
   top: 0;
   background: #173F35;
+}
+.nav-fixed .nav-logo {
+  opacity: 1;
+}
+.nav-active {
+  border-bottom: 1px solid #ffffff;
+  z-index: 99;
 }
 .map {
   overflow: hidden;
@@ -430,11 +499,13 @@ nav ul li span {
   }
 }
 .location-list {
+  color: #b620e0;
   list-style: none;
   padding: 0;
   position: absolute;
-  left: 65%;
-  top: 20%;
+  left: 80%;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 @media only screen and (max-width:849px) {
   .location-list {
@@ -466,15 +537,36 @@ nav ul li span {
   margin-bottom: 165px;
 }
 h2 {
-  line-height: 1.3;
+  margin-bottom: 5px;
+  line-height: 1.4;
   font-size: 72px;
   color: #3F3520;
+}
+@media only screen and (max-width:767px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width:479px) {
+  h2 {
+    font-size: 30px;
+  }
 }
 p {
   line-height: 1.4;
   font-size: 19px;
   font-family: 'Roboto', sans-serif;
   color: #616161;
+}
+@media only screen and (max-width:767px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:767px) {
+  p {
+    font-size: 13px;
+  }
 }
 .location-name:hover {
   text-decoration: underline;

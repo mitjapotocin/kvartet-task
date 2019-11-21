@@ -3,23 +3,49 @@ header {
         text-decoration: inherit;
         color: inherit;
     }
-    
+
+    h3 {
+        font-weight: 300;
+        font-size: 28px;
+        color: #ffffff;
+
+        @media @bp_max_768 {
+            font-size: 22px;
+        }
+
+        @media @bp_max_480 {
+            font-size: 18px;
+        }
+    }
+
     h1 {
         font-size: 82px;
-        color: white;
+        color: #ffffff;
         text-align: left;
+
+        @media @bp_max_768 {
+            font-size: 58px;
+        }
+
+        @media @bp_max_480 {
+            font-size: 42px;
+        }
     }
-    
+
     height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: 50%;
     background-position-y: top;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     margin-bottom: 120px;
+    @media @bp_max_768 {
+        margin-bottom: 70px;
+    }
+
 }
 
 header::before {
@@ -36,4 +62,30 @@ header::before {
 
 .header-content {
     z-index: 1;
+}
+
+.header-big-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: @main-green;
+    max-width: 45%;
+
+    img {
+        padding: 20%;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.header-logo-bottom {
+    position: absolute;
+    bottom: 8%;
+
+    @media @bp_max_768 {
+        margin-left: 16px;
+        margin-bottom: -5px;
+    }
+
 }

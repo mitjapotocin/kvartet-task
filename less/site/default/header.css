@@ -5,8 +5,8 @@ header {
   background-position-x: 50%;
   background-position-y: top;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   margin-bottom: 120px;
 }
@@ -14,9 +14,13 @@ header a {
   text-decoration: inherit;
   color: inherit;
 }
+header h3 {
+  font-size: 28px;
+  color: #ffffff;
+}
 header h1 {
   font-size: 82px;
-  color: white;
+  color: #ffffff;
   text-align: left;
 }
 header::before {
@@ -30,4 +34,10 @@ header::before {
 }
 .header-content {
   z-index: 1;
+}
+.header-big-logo {
+  padding: 52px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
