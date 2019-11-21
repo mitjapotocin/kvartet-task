@@ -9,10 +9,9 @@ for (let n = 0; n < pins.length; n++) {
     locationNames[n].classList.remove("underline");
   });
   locationNames[n].addEventListener("mouseover", () => {
-    pins[n].classList.add("scale");
+    pins[n].classList.add("scale-pin");
   });
   locationNames[n].addEventListener("mouseout", () => {
-    pins[n].classList.remove("scale");
+    pins[n].classList.remove("scale-pin");
   });
-
 }

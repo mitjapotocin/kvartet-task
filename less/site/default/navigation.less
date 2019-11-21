@@ -5,7 +5,9 @@ nav {
     top: 35px;
     color: #ffffff;
     position: absolute;
-    z-index: 99;
+    @media @bp_max_768 {
+        .hidden
+    }
 }
 
 nav ul {
@@ -13,9 +15,13 @@ nav ul {
 }
 
 nav ul li {
+    line-height: 20px;
     font-size: 16px;
     float: left;
     margin-left: 24px;
+    span {
+        .margin(5px)
+    }
 }
 
 .nav-fixed {

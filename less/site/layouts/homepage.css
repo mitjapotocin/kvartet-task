@@ -2,7 +2,6 @@
   max-width: 1540px;
   margin: 0 auto;
   overflow: hidden;
-}
-body {
-  font-family: 'Roboto', sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
 }
