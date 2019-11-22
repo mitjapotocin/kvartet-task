@@ -39,6 +39,8 @@
 }
 
 .pin-number {
+    user-select: none;
+    cursor: default;
     color: white;
     position: absolute;
     top: 50%;
@@ -119,6 +121,9 @@ p {
     }
 }
 
-.location-name:hover {
-    .underline
+.location-name {
+    cursor: default;
+    &:hover{
+        .underline
+    }
 }
