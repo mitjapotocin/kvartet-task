@@ -42,6 +42,7 @@ header {
     justify-content: center;
     position: relative;
     margin-bottom: 120px;
+
     @media @bp_max_768 {
         margin-bottom: 70px;
     }
@@ -68,14 +69,18 @@ header::before {
     position: absolute;
     top: 0;
     left: 0;
-    background: @main-green;
-    max-width: 45%;
+    background: @basecolor;
 
     img {
-        padding: 20%;
+        padding: 55px 52px;
+        width: 100%;
+        height: auto;
         display: block;
-        max-width: 100%;
-        max-height: 100%;
+    }
+
+    @media @bp_max_768 {
+        .scale(0.625);
+        transform-origin: top left;
     }
 }
 

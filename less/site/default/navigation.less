@@ -1,12 +1,12 @@
 nav {
     font-family: 'Poppins', sans-serif;
-    padding: 22px 0 22px 0;
+    padding: 17px 0 17px 0;
     width: 100%;
     top: 35px;
     color: #ffffff;
     position: absolute;
     z-index: 99;
-    @media @bp_max_768 {
+    @media @bp_max_640 {
         .hidden
     }
 }
@@ -29,17 +29,17 @@ nav ul li {
     float: left;
     opacity: 0;
     img {
+        margin-top:1px;
         display: block;
     }
 }
-
 
 .nav-fixed {
     transition-property: background, opacity;
     transition-duration: 0.4s;
     position: fixed;
     top: 0;
-    background: @main-green;
+    background: @basecolor;
     .nav-logo {
         opacity: 1;
     }

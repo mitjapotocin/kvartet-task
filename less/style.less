@@ -35,11 +35,9 @@
 @import "site/default/footer";
 @import "site/default/navigation";
 @import "site/default/main";
-@import "site/sections/map";
-// @import "site/sections/";
+@import "site/modules/map";
+@import "site/modules/slider";
 
-//@import "site/modules/modules/module";
-//@import "site/modules/modules/content-module";
 
 // === layouts ===
 @import "site/layouts/homepage";
@@ -50,58 +48,4 @@
 // === print ===
 @media print {
 	@import "default/print";
-}
-
-/* the slides */
-.slick-slide {
-	margin: 0 10px;
-}
-
-/* the parent */
-.slick-list {
-	margin: 0 -10px;
-}
-
-.slider-img {
-	width: 100%;
-}
-
-.slider-nav-header {
-	float: left;
-}
-
-.slider-nav-buttons {
-	float: right;
-}
-
-.slider-button {
-	padding: 20px;
-}
-
-.slider-nav {
-	overflow: auto;
-}
-
-.segment {
-	float: right;
-	padding: 30px 20px;
-	background: #ffffff;
-	position: relative;
-	top: -60px;
-	width: 74%;
-
-	p {
-		font-size: 13px;
-	}
-
-	div {
-		overflow: auto;
-		padding-bottom: 10px ;
-		h3 {
-			float: left;
-		}
-		button {
-			float: right;
-		}
-	}
 }
