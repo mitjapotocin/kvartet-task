@@ -416,6 +416,7 @@ nav ul li span {
   margin-right: 5px;
 }
 .nav-logo {
+  display: block;
   float: left;
   opacity: 0;
 }
@@ -667,11 +668,32 @@ p {
   float: left;
 }
 .slider-nav-buttons {
-  float: right ;
+  float: right;
 }
 .slider-button {
   padding: 20px;
 }
 .slider-nav {
   overflow: auto;
+}
+.segment {
+  float: right;
+  padding: 30px 20px;
+  background: #ffffff;
+  position: relative;
+  top: -60px;
+  width: 74%;
+}
+.segment p {
+  font-size: 13px;
+}
+.segment div {
+  overflow: auto;
+  padding-bottom: 10px ;
+}
+.segment div h3 {
+  float: left;
+}
+.segment div button {
+  float: right;
 }

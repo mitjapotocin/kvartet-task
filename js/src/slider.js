@@ -3,6 +3,7 @@ $(document).ready(function() {
     dots: false,
     infinite: false,
     speed: 300,
+    swipe: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: $(".prev"),
@@ -18,3 +19,4 @@ $(document).ready(function() {
     ]
   });
 });
+    
