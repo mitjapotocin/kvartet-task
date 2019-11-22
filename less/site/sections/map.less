@@ -66,12 +66,15 @@
     width: 83%;
     display: inline-flex;
     margin-bottom: 65px;
-    @media @bp_max_850 {
-        div {
-            margin: 0;
-        }
-        display: block;
+    @media @bp_max_768 {
+        margin-bottom: 40px;
         width: 100%
+    }
+    @media @bp_max_960 {
+        display: inline-block;
+    }
+    & > * {
+        .align-left
     }
 }
 
@@ -85,6 +88,9 @@
 
 .location {
     margin-bottom: 165px;
+    @media @bp_max_768 {
+        margin-bottom: 70px;
+    }
 }
 
 h2 {
