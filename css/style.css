@@ -257,6 +257,12 @@ textarea {
   font-family: CircularPro-Bold;
   src: url(../../font/CircularPro-Bold.otf);
 }
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
 button,
 input,
 select,
@@ -280,13 +286,13 @@ h2 {
   font-family: 'CircularPro-Bold';
 }
 body {
-  background-color: #F6F5F3;
+  background-color: #f6f5f3;
   font-family: 'Roboto', sans-serif;
 }
 h2 {
   line-height: 1.3;
   font-size: 72px;
-  color: #3F3520;
+  color: #3f3520;
 }
 p {
   line-height: 1.4;
@@ -376,7 +382,7 @@ header::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #173F35;
+  background: #173f35;
 }
 .header-big-logo img {
   padding: 55px 52px;
@@ -445,7 +451,7 @@ nav ul li span {
   transition-duration: 0.4s;
   position: fixed;
   top: 0;
-  background: #173F35;
+  background: #173f35;
 }
 .nav-fixed .nav-logo {
   opacity: 1;
@@ -589,7 +595,7 @@ h2 {
   margin-bottom: 5px;
   line-height: 1.4;
   font-size: 72px;
-  color: #3F3520;
+  color: #3f3520;
 }
 @media only screen and (max-width:767px) {
   h2 {
@@ -623,49 +629,132 @@ p {
 .location-name:hover {
   text-decoration: underline;
 }
-/* the slides */
 .slick-slide {
   margin: 0 10px;
 }
-/* the parent */
 .slick-list {
   margin: 0 -10px;
+}
+.slick-track {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .slider-img {
   width: 100%;
 }
-.slider-nav-header {
+.slider-nav-heading {
   float: left;
+  position: absolute;
+  bottom: 0;
+}
+.slider-nav-heading h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  color: #3f3520;
+}
+@media only screen and (max-width:639px) {
+  .slider-nav-heading h4 {
+    font-size: 13px;
+  }
 }
 .slider-nav-buttons {
   float: right;
 }
 .slider-button {
-  padding: 20px;
-}
-.slider-nav {
-  overflow: auto;
-}
-.segment {
-  float: right;
-  padding: 30px 20px;
-  background: #ffffff;
-  position: relative;
-  top: -60px;
-  width: 74%;
-}
-.segment p {
-  font-size: 13px;
-}
-.segment div {
-  overflow: auto;
-  padding-bottom: 10px;
-}
-.segment div h3 {
+  cursor: pointer;
+  width: 90px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #e6e6e6;
+  outline: none;
   float: left;
 }
-.segment div button {
+@media only screen and (max-width:639px) {
+  .slider-button {
+    width: 60px;
+    height: 30px;
+  }
+  .slider-button img {
+    width: 10px;
+  }
+}
+.slider-button:hover {
+  background: #a39382;
+}
+.slider-button img {
+  width: 16px;
+}
+.slick-disabled {
+  cursor: default;
+  background: #fff;
+}
+.slick-disabled:hover {
+  background: #fff;
+}
+.slider-nav {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+.slick-element {
+  position: relative;
+}
+.card {
+  display: block;
   float: right;
+  padding: 30px 20px;
+  background: #f6f5f3;
+  position: relative;
+  width: 74%;
+  top: -64px;
+}
+@media only screen and (max-width:639px) {
+  .card {
+    top: -38px;
+    padding: 9px 9px;
+  }
+}
+.card p {
+  font-size: 15px;
+}
+@media only screen and (max-width:639px) {
+  .card p {
+    font-size: 12px;
+  }
+}
+.card-header {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.card-header h3 {
+  color: #3f3520;
+  float: left;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+@media only screen and (max-width:639px) {
+  .card-header h3 {
+    font-size: 17px;
+  }
+}
+.card-button {
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  float: right;
+  border: none;
+}
+@media only screen and (max-width:639px) {
+  .card-button {
+    width: 30px;
+    height: 30px;
+  }
 }
 .container {
   max-width: 1600px;

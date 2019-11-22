@@ -1,19 +1,43 @@
-/* the slides */
+//Adds margin between slick-slider elements
 .slick-slide {
     margin: 0 10px;
 }
 
-/* the parent */
 .slick-list {
     margin: 0 -10px;
 }
+
+
+// Fix for slick slide height issues
+.slick-track {
+    display: flex;
+}
+
+// .slick-track .slick-slide {
+//     // display: flex;
+//     // height: auto;
+// }
+
 
 .slider-img {
     width: 100%;
 }
 
-.slider-nav-header {
+.slider-nav-heading {
     float: left;
+    position: absolute;
+    bottom: 0;
+
+    h4 {
+        .font-poppins;
+        font-weight: 300;
+        font-size: 23px;
+        color: @textgold;
+
+        @media @bp_max_640 {
+            font-size: 13px;
+        }
+    }
 }
 
 .slider-nav-buttons {
@@ -21,35 +45,104 @@
 }
 
 .slider-button {
-    padding: 20px;
+    cursor: pointer;
+    .wh(90px, 60px);
+
+    @media @bp_max_640 {
+        .wh(60px, 30px);
+
+        img {
+            width: 10px;
+        }
+    }
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: @buttoncolor-lighter;
+    outline: none;
+    float: left;
+
+    &:hover {
+        background: @buttoncolor;
+    }
+
+    img {
+        width: 16px;
+    }
+}
+
+
+.slick-disabled {
+    cursor: default;
+    background: #fff;
+
+    &:hover {
+        background: #fff;
+    }
 }
 
 .slider-nav {
-    overflow: auto;
+    .clearfix;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.segment {
+.slick-element {
+    position: relative;
+}
+
+.card {
+    display: block;
     float: right;
     padding: 30px 20px;
-    background: #ffffff;
+    background: @backgroundcolor;
     position: relative;
-    top: -60px;
     width: 74%;
+    top: -64px;
 
-    p {
-        font-size: 13px;
+    @media @bp_max_640 {
+        top: -38px;
+        padding: 9px 9px;
     }
 
-    div {
-        overflow: auto;
-        padding-bottom: 10px;
 
-        h3 {
-            float: left;
-        }
+    p {
+        font-size: 15px;
 
-        button {
-            float: right;
+        @media @bp_max_640 {
+            font-size: 12px;
         }
+    }
+
+}
+
+.card-header {
+    .clearfix;
+    padding-bottom: 10px;
+
+    h3 {
+        color: @textgold;
+        float: left;
+        font-weight: 500;
+        .font-poppins;
+        font-size: 30px;
+
+        @media @bp_max_640 {
+            font-size: 17px;
+        }
+    }
+
+}
+
+.card-button {
+    background: #fff;
+    border-radius: 50%;
+    .wh(40px, 40px);
+    float: right;
+    border: none;
+
+    @media @bp_max_640 {
+        .wh(30px, 30px);
     }
 }
