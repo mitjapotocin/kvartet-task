@@ -537,20 +537,6 @@ fieldset {
 .form-row input:focus {
   outline: auto 3px #a39382;
 }
-.form-row input[type=checkbox] {
-  opacity: 0.4;
-}
-.custom-ckeckbox {
-  display: block;
-  position: absolute;
-  top: -20px;
-  width: 16px;
-  height: 16px;
-  background: red;
-}
-.checkbox-row {
-  position: relative;
-}
 .contact-form h3 {
   color: #fff;
   opacity: 0.9;
@@ -563,8 +549,78 @@ fieldset {
   font-size: 16;
   margin-bottom: 24px;
 }
-.form-label-ceckbox {
-  display: inline;
+.checkbox-label {
+  margin-left: 10px;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.5;
+  vertical-align: top;
+}
+.checkbox-row {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+.checkbox-row input[type=checkbox]:checked + .custom-ckeckbox {
+  background: #a39382;
+}
+.checkbox-row input[type=checkbox]:checked + .custom-ckeckbox .custom-checkbox-image {
+  visibility: visible;
+}
+.checkbox-row input[type=checkbox] {
+  width: 13px;
+  height: 13px;
+  padding: 1px;
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+.checkbox-row input[type=checkbox]:focus {
+  outline: auto 3px #a39382;
+}
+.custom-ckeckbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background: white;
+}
+.custom-checkbox-image {
+  visibility: hidden;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form-button {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  border-radius: 25px;
+  width: 160px;
+  height: 50px;
+  color: #fff;
+  background: #a39382;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+@media only screen and (max-width:959px) {
+  .form-button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
+.form-button:focus {
+  outline: auto 3px #a39382;
 }
 nav {
   font-family: 'Poppins', sans-serif;

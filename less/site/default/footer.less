@@ -150,27 +150,9 @@ fieldset {
         }
     }
 
-    input[type=checkbox]:checked {}
-
-    input[type=checkbox] {
-        // visibility: hidden;
-        opacity: 0.4;
-
-    }
 }
 
-.custom-ckeckbox {
-    display: block;
-    position: absolute;
-    top: -20px;
-    .wh(16px, 16px);
-    background: red;
 
-}
-
-.checkbox-row {
-    position: relative;
-}
 
 .contact-form {
     h3 {
@@ -188,6 +170,85 @@ fieldset {
     }
 }
 
-.form-label-ceckbox {
-    display: inline;
+
+.checkbox-label {
+    margin-left: 10px;
+    display: inline-block;
+    .font-roboto;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.5;
+    vertical-align: top;
+
+}
+
+.checkbox-row {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+
+    input[type=checkbox]:checked+.custom-ckeckbox {
+        background: @buttoncolor;
+
+        .custom-checkbox-image {
+            visibility: visible;
+        }
+    }
+
+    input[type=checkbox] {
+        .wh(13px, 13px);
+        padding: 1px;
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+        position: relative;
+        top: 1px;
+        left: 1px;
+
+        &:focus {
+            outline: auto 3px @buttoncolor;
+        }
+    }
+
+}
+
+.custom-ckeckbox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    .wh(15px, 15px);
+    border-radius: 2px;
+    background: white
+}
+
+.custom-checkbox-image {
+    visibility: hidden;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    .translate(-50%, -50%);
+}
+
+.form-button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border-radius: 25px;
+    .wh(160px, 50px);
+
+    @media @bp_max_960 {
+        .wh(120px, 40px);
+        border-radius: 20px;
+    }
+
+    color: #fff;
+    background: @buttoncolor;
+    border: none;
+    letter-spacing: 1px;
+
+    font-size: 14px;
+
+    &:focus {
+        outline: auto 3px @buttoncolor;
+    }
 }
