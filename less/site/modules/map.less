@@ -1,12 +1,15 @@
 .map {
     overflow: hidden;
     position: relative;
+
     @media @bp_max_850 {
         .margin-l-r(-20vw)
     }
+
     @media @bp_max_640 {
         .margin-l-r(-45vw)
     }
+
     @media @bp_max_480 {
         .margin-l-r(-70vw)
     }
@@ -18,19 +21,32 @@
     object-fit: cover;
 }
 
-.location-pin {
+
+.location-pin-base {
     width: 58px;
     height: auto;
     position: absolute;
     .translate(@x: -50%, @y: -50%);
-    &:hover {
-        .scale-pin
-    }
+
     @media @bp_max_850 {
         width: 36px;
     }
+
     @media @bp_max_480 {
         width: 25px;
+    }
+
+}
+
+.location-pin-main {
+    .location-pin-base;
+}
+
+.location-pin {
+    .location-pin-base;
+
+    &:hover {
+        .scale-pin
     }
 }
 
@@ -46,6 +62,7 @@
     top: 50%;
     left: 50%;
     .translate(@x: -50%, @y: -50%);
+
     @media @bp_max_850 {
         .hidden
     }
@@ -59,6 +76,7 @@
     left: 80%;
     top: 50%;
     .translate(@x: 0, @y: -50%);
+
     @media @bp_max_850 {
         .hidden
     }
@@ -68,14 +86,17 @@
     width: 83%;
     display: inline-flex;
     margin-bottom: 65px;
+
     @media @bp_max_768 {
         margin-bottom: 40px;
         width: 100%
     }
+
     @media @bp_max_960 {
         display: inline-block;
     }
-    & > * {
+
+    &>* {
         .align-left
     }
 }
@@ -90,6 +111,7 @@
 
 .location {
     margin-bottom: 165px;
+
     @media @bp_max_768 {
         margin-bottom: 70px;
     }
@@ -100,9 +122,11 @@ h2 {
     line-height: 1.4;
     font-size: 72px;
     color: @textgold;
+
     @media @bp_max_768 {
         font-size: 48px;
     }
+
     @media @bp_max_480 {
         font-size: 30px;
     }
@@ -113,9 +137,11 @@ p {
     font-size: 19px;
     font-family: 'Roboto', sans-serif;
     color: @textgray;
+
     @media @bp_max_768 {
         font-size: 16px;
     }
+
     @media @bp_max_768 {
         font-size: 13px;
     }
@@ -123,7 +149,8 @@ p {
 
 .location-name {
     cursor: default;
-    &:hover{
+
+    &:hover {
         .underline
     }
 }

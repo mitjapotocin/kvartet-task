@@ -101,7 +101,7 @@
     width: 74%;
     top: -64px;
 
-    @media @bp_max_640 {
+    @media @bp_max_768 {
         top: -38px;
         // padding: 9px 9px;
     }
@@ -110,7 +110,7 @@
     p {
         font-size: 15px;
 
-        @media @bp_max_640 {
+        @media @bp_max_768 {
             font-size: 12px;
         }
     }
@@ -121,10 +121,11 @@
     .clearfix;
     padding-bottom: 10px;
     cursor: pointer;
-    padding: 30px 20px 10px 20px;
+    margin: 30px 20px 10px 20px;
+    position: relative;
 
-    @media @bp_max_640 {
-        padding: 9px
+    @media @bp_max_768 {
+        margin: 9px
     }
 
     h3 {
@@ -134,7 +135,7 @@
         .font-poppins;
         font-size: 30px;
 
-        @media @bp_max_640 {
+        @media @bp_max_768 {
             font-size: 17px;
         }
     }
@@ -172,9 +173,11 @@
     background: #fff;
     border-radius: 50%;
     .wh(40px, 40px);
-    float: right;
+    // float: right;
     border: none;
-    position: relative;
+    // position: relative;
+    position: absolute;
+    right: 0;
 
     @media @bp_max_640 {
         .wh(30px, 30px);

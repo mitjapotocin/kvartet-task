@@ -82,20 +82,23 @@
                         <div class="pin-number">1</div>
                     </div>
                     <div class="location-pin" style="top: 35%; left: 40%;">
-                        <img src="images/svg/location-pin.svg" alt="+">
+                        <img src="images/svg/location-pin.svg" alt="Location pin">
                         <div class="pin-number">2</div>
                     </div>
                     <div class="location-pin" style="top: 65%; left: 70%;">
-                        <img src="images/svg/location-pin.svg" alt="+">
+                        <img src="images/svg/location-pin.svg" alt="Location pin">
                         <div class="pin-number">3</div>
                     </div>
                     <div class="location-pin" style="top: 66%; left: 42%;">
-                        <img src="images/svg/location-pin.svg" alt="+">
+                        <img src="images/svg/location-pin.svg" alt="Location pin">
                         <div class="pin-number">4</div>
                     </div>
                     <div class="location-pin" style="top: 51%; left: 55%;">
-                        <img src="images/svg/location-pin.svg" alt="+">
+                        <img src="images/svg/location-pin.svg" alt="Location pin">
                         <div class="pin-number">5</div>
+                    </div>
+                    <div class="location-pin-main" style="top: 34%; left: 46%;">
+                        <img src="images/svg/pin-big.svg" alt="Location pin main">
                     </div>
                 </div>
 
@@ -299,8 +302,57 @@
                 </div>
             </div>
         </div>
-        <footer>Hello</footer>
     </section>
+    <footer class="container">
+        <div class="info-contact">
+
+            <div class="contact">
+                <p>
+                    +386 04 529 716
+                    <br>mitja@email.com
+                </p>
+                <br>
+                <p>
+                    Med drevesi 99
+                    <br>SI-1000 Ljubljana, Slovenija
+                </p>
+                <div class="social">
+                    I F Li
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="" method="post">
+                    <fieldset>
+                        <div class="form_row">
+                            <label for="name" class="form-label">Full name</label>
+                            <input type="text" name="name" id="name" class="input-field" required />
+                        </div>
+                        <div class="form_row">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="input-field" required />
+                        </div>
+                        <div class="form_row">
+                            <label for="message" class="form-label">Phone number</label>
+                            <input name="number" id="number" class="input-field" rows="1"></input>
+                        </div>
+                        <div class="form_row">
+                            <label for="message" class="form-label">Your message</label>
+                            <textarea name="message" id="message" class="input-field"></textarea>
+                        </div>
+
+                        <div class="form_row">
+                            <input type="checkbox" name="checkbox" id="checkbox" class="input-field-checkbox"></input>
+                            <label for="checkbox" class="form-label-ceckbox">Lerem ipsum</label>
+
+                            <button class="form-button" type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </footer>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/src/concat/functions.js"></script>

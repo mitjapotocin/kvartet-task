@@ -403,6 +403,13 @@ header::before {
     margin-bottom: -5px;
   }
 }
+.social {
+  padding-top: 23px;
+}
+.form-label {
+  display: none !important;
+  visibility: hidden;
+}
 nav {
   font-family: 'Poppins', sans-serif;
   padding: 17px 0 17px 0;
@@ -480,14 +487,43 @@ nav ul li span {
   width: 100%;
   object-fit: cover;
 }
-.location-pin {
+.location-pin-base {
   width: 58px;
   height: auto;
   position: absolute;
   transform: translate(-50%, -50%);
 }
-.location-pin:hover {
-  transform: translate(-50%, -50%) scale(1.15);
+@media only screen and (max-width:849px) {
+  .location-pin-base {
+    width: 36px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-pin-base {
+    width: 25px;
+  }
+}
+.location-pin-main {
+  width: 58px;
+  height: auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width:849px) {
+  .location-pin-main {
+    width: 36px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-pin-main {
+    width: 25px;
+  }
+}
+.location-pin {
+  width: 58px;
+  height: auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 @media only screen and (max-width:849px) {
   .location-pin {
@@ -498,6 +534,9 @@ nav ul li span {
   .location-pin {
     width: 25px;
   }
+}
+.location-pin:hover {
+  transform: translate(-50%, -50%) scale(1.15);
 }
 .scale-pin {
   transform: translate(-50%, -50%) scale(1.15);
@@ -683,7 +722,7 @@ p {
   width: 74%;
   top: -64px;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card {
     top: -38px;
   }
@@ -691,7 +730,7 @@ p {
 .card p {
   font-size: 15px;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card p {
     font-size: 12px;
   }
@@ -700,11 +739,12 @@ p {
   overflow: hidden;
   padding-bottom: 10px;
   cursor: pointer;
-  padding: 30px 20px 10px 20px;
+  margin: 30px 20px 10px 20px;
+  position: relative;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card-header {
-    padding: 9px;
+    margin: 9px;
   }
 }
 .card-header h3 {
@@ -714,7 +754,7 @@ p {
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card-header h3 {
     font-size: 17px;
   }
@@ -740,9 +780,9 @@ p {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  float: right;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 @media only screen and (max-width:639px) {
   .card-button {
