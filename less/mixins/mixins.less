@@ -53,6 +53,10 @@
 	transform: translate3d(@x, @y, @z);
 }
 
+.translate-center {
+	transform: translate(-50%, -50%);
+}
+
 .clearfix() {}
 
 .clearfix(@hard: false) when (@hard =false) {
@@ -100,6 +104,10 @@
 
 .invisible() {
 	visibility: hidden;
+}
+
+.visible() {
+	visibility: visible;
 }
 
 // .resize(VALUE) (none, both, horizontal, vertical, inherit)

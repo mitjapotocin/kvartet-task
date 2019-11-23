@@ -95,7 +95,7 @@
 .card {
     display: block;
     float: right;
-    padding: 30px 20px;
+    // padding: 30px 20px;
     background: @backgroundcolor;
     position: relative;
     width: 74%;
@@ -103,7 +103,7 @@
 
     @media @bp_max_640 {
         top: -38px;
-        padding: 9px 9px;
+        // padding: 9px 9px;
     }
 
 
@@ -120,6 +120,12 @@
 .card-header {
     .clearfix;
     padding-bottom: 10px;
+    cursor: pointer;
+    padding: 30px 20px 10px 20px;
+
+    @media @bp_max_640 {
+        padding: 9px
+    }
 
     h3 {
         color: @textgold;
@@ -133,16 +139,72 @@
         }
     }
 
+    &:hover {
+        h3 {
+            .underline
+        }
+
+        .card-button {
+            .visible
+        }
+
+
+    }
+}
+
+.card-opened {
+    .card-button-vertical-line {
+        .invisible;
+    }
+
+    .card-text {
+        .visible;
+    }
+
+    .card-button {
+        .visible;
+
+    }
 }
 
 .card-button {
+    .invisible;
     background: #fff;
     border-radius: 50%;
     .wh(40px, 40px);
     float: right;
     border: none;
+    position: relative;
 
     @media @bp_max_640 {
         .wh(30px, 30px);
     }
+}
+
+.card-button-base {
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate-center;
+}
+
+.card-button-minus {
+    .card-button-base;
+    .wh(11px, 1px);
+}
+
+.card-button-vertical-line {
+    .card-button-base;
+    .wh(1px, 11px);
+}
+
+.card-text {
+    padding: 0px 20px 10px 20px;
+
+    @media @bp_max_640 {
+        padding: 0 9px 9px 9px;
+    }
+
+    .invisible;
 }

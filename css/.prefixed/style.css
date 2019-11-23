@@ -253,6 +253,9 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
+.translate-center {
+  transform: translate(-50%, -50%);
+}
 @font-face {
   font-family: CircularPro-Bold;
   src: url(../../font/CircularPro-Bold.otf);
@@ -675,7 +678,6 @@ p {
 .card {
   display: block;
   float: right;
-  padding: 30px 20px;
   background: #f6f5f3;
   position: relative;
   width: 74%;
@@ -684,7 +686,6 @@ p {
 @media only screen and (max-width:639px) {
   .card {
     top: -38px;
-    padding: 9px 9px;
   }
 }
 .card p {
@@ -698,6 +699,13 @@ p {
 .card-header {
   overflow: hidden;
   padding-bottom: 10px;
+  cursor: pointer;
+  padding: 30px 20px 10px 20px;
+}
+@media only screen and (max-width:639px) {
+  .card-header {
+    padding: 9px;
+  }
 }
 .card-header h3 {
   color: #3f3520;
@@ -711,18 +719,69 @@ p {
     font-size: 17px;
   }
 }
+.card-header:hover h3 {
+  text-decoration: underline;
+}
+.card-header:hover .card-button {
+  visibility: visible;
+}
+.card-opened .card-button-vertical-line {
+  visibility: hidden;
+}
+.card-opened .card-text {
+  visibility: visible;
+}
+.card-opened .card-button {
+  visibility: visible;
+}
 .card-button {
+  visibility: hidden;
   background: #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   float: right;
   border: none;
+  position: relative;
 }
 @media only screen and (max-width:639px) {
   .card-button {
     width: 30px;
     height: 30px;
+  }
+}
+.card-button-base {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-button-minus {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 1px;
+}
+.card-button-vertical-line {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 11px;
+}
+.card-text {
+  padding: 0px 20px 10px 20px;
+  visibility: hidden;
+}
+@media only screen and (max-width:639px) {
+  .card-text {
+    padding: 0 9px 9px 9px;
   }
 }
 .container {
