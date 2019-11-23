@@ -415,12 +415,104 @@ header::before {
     margin-bottom: -5px;
   }
 }
+footer {
+  padding: 56px 0 31px 0;
+  background: #173f35;
+}
 .social {
   padding-top: 23px;
+}
+.social img {
+  width: 45px;
+  margin-right: 11px;
+}
+@media only screen and (max-width:767px) {
+  .social img {
+    width: 34px;
+    margin-right: 16px;
+  }
 }
 .form-label {
   display: none;
   visibility: hidden;
+}
+.copyrights-credit {
+  overflow: hidden;
+  opacity: 0.6;
+}
+.copyrights-credit p {
+  color: #fff;
+  font-size: 14px;
+}
+@media only screen and (max-width:767px) {
+  .copyrights-credit p {
+    font-size: 9px;
+  }
+}
+.copyrights {
+  float: left;
+}
+@media only screen and (max-width:767px) {
+  .copyrights {
+    float: none;
+    margin-bottom: 8px;
+  }
+}
+.credit {
+  float: right;
+}
+@media only screen and (max-width:767px) {
+  .credit {
+    float: none;
+  }
+}
+.contact {
+  grid-area: contact;
+}
+.contact p {
+  color: #fff;
+  opacity: 0.9;
+}
+@media only screen and (max-width:767px) {
+  .contact p {
+    font-size: 13px;
+  }
+}
+.contact-form {
+  grid-area: contact-form;
+}
+.footer-logo {
+  grid-area: footer-logo;
+  position: relative;
+}
+.footer-logo img {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+@media only screen and (max-width:959px) {
+  .footer-logo img {
+    width: 133px;
+  }
+}
+@media only screen and (max-width:767px) {
+  .footer-logo img {
+    position: static;
+  }
+}
+.info-contact {
+  display: grid;
+  grid-template-columns: 25% 37% 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "contact contact-form footer-logo";
+}
+@media only screen and (max-width:767px) {
+  .info-contact {
+    grid-gap: 34px;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas: "contact-form" "contact" "footer-logo";
+  }
 }
 nav {
   font-family: 'Poppins', sans-serif;
@@ -655,19 +747,19 @@ h2 {
     font-size: 30px;
   }
 }
-p {
+.location-info p {
   line-height: 1.4;
   font-size: 19px;
   font-family: 'Roboto', sans-serif;
   color: #616161;
 }
 @media only screen and (max-width:767px) {
-  p {
+  .location-info p {
     font-size: 16px;
   }
 }
 @media only screen and (max-width:767px) {
-  p {
+  .location-info p {
     font-size: 13px;
   }
 }
@@ -802,7 +894,7 @@ p {
 .card-header:hover .card-button {
   visibility: visible;
 }
-.card-opened .card-button-vertical-line {
+.card-opened .card-button-sign-vertical-line {
   visibility: hidden;
 }
 .card-opened .card-text {
@@ -822,13 +914,14 @@ p {
   position: absolute;
   right: 0;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card-button {
     width: 30px;
     height: 30px;
+    margin-right: 11px;
   }
 }
-.card-button-base {
+.card-button-sign-base {
   background: #000;
   position: absolute;
   top: 50%;
@@ -837,7 +930,7 @@ p {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.card-button-minus {
+.card-button-sign-minus {
   background: #000;
   position: absolute;
   top: 50%;
@@ -848,7 +941,7 @@ p {
   width: 11px;
   height: 1px;
 }
-.card-button-vertical-line {
+.card-button-sign-vertical-line {
   background: #000;
   position: absolute;
   top: 50%;

@@ -1,7 +1,112 @@
+footer {
+    padding: 56px 0 31px 0;
+    background: @basecolor;
+}
+
 .social {
+    img {
+
+        width: 45px;
+        margin-right: 11px;
+
+        @media @bp_max_768 {
+            width: 34px;
+            margin-right: 16px;
+
+        }
+    }
+
     padding-top: 23px; //preveri
 }
 
 .form-label {
     .hidden
+}
+
+.copyrights-credit {
+    .clearfix;
+    opacity: 0.6;
+
+    p {
+        color: #fff;
+        font-size: 14px;
+
+        @media @bp_max_768 {
+            font-size: 9px;
+        }
+    }
+
+}
+
+.copyrights {
+    float: left;
+
+    @media @bp_max_768 {
+        float: none;
+        margin-bottom: 8px;
+    }
+}
+
+.credit {
+    float: right;
+
+    @media @bp_max_768 {
+
+        float: none;
+    }
+}
+
+.contact {
+    p {
+        color: #fff;
+        opacity: 0.9;
+
+        @media @bp_max_768 {
+            font-size: 13px;
+        }
+    }
+
+    grid-area: contact;
+}
+
+.contact-form {
+    grid-area: contact-form;
+}
+
+.footer-logo {
+    grid-area: footer-logo;
+    position: relative;
+
+    img {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+
+        @media @bp_max_960 {
+            width: 133px;
+
+        }
+
+        @media @bp_max_768 {
+            position: static;
+        }
+    }
+}
+
+
+
+.info-contact {
+    display: grid;
+    grid-template-columns: 25% 37% 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "contact contact-form footer-logo";
+
+    @media @bp_max_768 {
+        //add row width 74%
+        grid-gap: 34px;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas: "contact-form""contact""footer-logo";
+
+    }
 }

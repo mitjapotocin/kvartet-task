@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>ic-fb</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Corwin-Landing-Mobile" transform="translate(-19.000000, -4477.000000)">
+            <g id="ic-fb" transform="translate(20.000000, 4478.000000)">
+                <rect id="Rectangle" stroke="#A39382" x="0" y="0" width="34" height="34" rx="17"></rect>
+                <path d="M18.4032954,26.0666667 L18.4032954,17.7953966 L21.1799721,17.7953966 L21.5955655,14.572144 L18.4032954,14.572144 L18.4032954,12.5134076 C18.4032954,11.5807263 18.6629078,10.94505 20.0015672,10.94505 L21.708812,10.9439816 L21.708812,8.06046859 C21.4128754,8.0220075 20.3989984,7.93333333 19.2216619,7.93333333 C16.759084,7.93333333 15.0753432,9.43652075 15.0753432,12.1950353 L15.0753432,14.572144 L12.291188,14.572144 L12.291188,17.7953966 L15.0753432,17.7953966 L15.0753432,26.0666667 L18.4032954,26.0666667 Z" id="ic" fill="#FFFFFF" opacity="0.900000036"></path>
+            </g>
+        </g>
+    </g>
+</svg>

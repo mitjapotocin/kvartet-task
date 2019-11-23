@@ -154,7 +154,7 @@
 }
 
 .card-opened {
-    .card-button-vertical-line {
+    .card-button-sign-vertical-line {
         .invisible;
     }
 
@@ -179,12 +179,13 @@
     position: absolute;
     right: 0;
 
-    @media @bp_max_640 {
+    @media @bp_max_768 {
         .wh(30px, 30px);
+        margin-right: 11px;
     }
 }
 
-.card-button-base {
+.card-button-sign-base {
     background: #000;
     position: absolute;
     top: 50%;
@@ -192,13 +193,13 @@
     .translate-center;
 }
 
-.card-button-minus {
-    .card-button-base;
+.card-button-sign-minus {
+    .card-button-sign-base;
     .wh(11px, 1px);
 }
 
-.card-button-vertical-line {
-    .card-button-base;
+.card-button-sign-vertical-line {
+    .card-button-sign-base;
     .wh(1px, 11px);
 }
 
