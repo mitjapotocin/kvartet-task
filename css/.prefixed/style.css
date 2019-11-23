@@ -407,7 +407,7 @@ header::before {
   padding-top: 23px;
 }
 .form-label {
-  display: none !important;
+  display: none;
   visibility: hidden;
 }
 nav {
@@ -421,7 +421,7 @@ nav {
 }
 @media only screen and (max-width:639px) {
   nav {
-    display: none !important;
+    display: none;
     visibility: hidden;
   }
 }
@@ -552,7 +552,7 @@ nav ul li span {
 }
 @media only screen and (max-width:849px) {
   .pin-number {
-    display: none !important;
+    display: none;
     visibility: hidden;
   }
 }
@@ -567,7 +567,7 @@ nav ul li span {
 }
 @media only screen and (max-width:849px) {
   .location-list {
-    display: none !important;
+    display: none;
     visibility: hidden;
   }
 }
@@ -770,6 +770,7 @@ p {
 }
 .card-opened .card-text {
   visibility: visible;
+  display: block;
 }
 .card-opened .card-button {
   visibility: visible;
@@ -817,9 +818,10 @@ p {
 }
 .card-text {
   padding: 0px 20px 10px 20px;
+  display: none;
   visibility: hidden;
 }
-@media only screen and (max-width:639px) {
+@media only screen and (max-width:767px) {
   .card-text {
     padding: 0 9px 9px 9px;
   }
