@@ -268,6 +268,9 @@ textarea {
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+.font-circularpro {
+  font-family: 'CircularPro-Bold';
+}
 button,
 input,
 select,
@@ -513,6 +516,73 @@ footer {
     grid-template-rows: min-content min-content min-content;
     grid-template-areas: "contact-form" "contact" "footer-logo";
   }
+}
+.copyrights-credit {
+  margin-top: 56;
+}
+@media only screen and (max-width:767px) {
+  .copyrights-credit {
+    margin-top: 40;
+  }
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.form-row {
+  margin-bottom: 7px;
+  border-bottom: 1px solid #fff;
+}
+.form-row input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 11px 0 11px 0;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+.form-row input::-webkit-input-placeholder {
+  opacity: 0.8;
+}
+.form-row input:-ms-input-placeholder {
+  opacity: 0.8;
+}
+.form-row input::placeholder {
+  opacity: 0.8;
+}
+.form-row input:focus {
+  outline: auto 3px #a39382;
+}
+.form-row input[type=checkbox] {
+  opacity: 0.4;
+}
+.custom-ckeckbox {
+  display: block;
+  position: absolute;
+  top: -20px;
+  width: 16px;
+  height: 16px;
+  background: red;
+}
+.checkbox-row {
+  position: relative;
+}
+.contact-form h3 {
+  color: #fff;
+  opacity: 0.9;
+  font-size: 31px;
+  font-family: 'CircularPro-Bold';
+  margin-bottom: 15px;
+}
+.contact-form p {
+  color: #a39382;
+  font-size: 16;
+  margin-bottom: 24px;
+}
+.form-label-ceckbox {
+  display: inline;
 }
 nav {
   font-family: 'Poppins', sans-serif;

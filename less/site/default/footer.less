@@ -110,3 +110,84 @@ footer {
 
     }
 }
+
+.copyrights-credit {
+    margin-top: 56;
+
+    @media @bp_max_768 {
+        margin-top: 40;
+    }
+}
+
+
+//form
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-row {
+    margin-bottom: 7px;
+    border-bottom: 1px solid #fff;
+
+    input {
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 16px;
+        padding: 11px 0 11px 0;
+        color: #fff;
+        .font-roboto;
+
+        &::placeholder {
+            opacity: 0.8;
+        }
+
+        &:focus {
+            outline: auto 3px @buttoncolor;
+        }
+    }
+
+    input[type=checkbox]:checked {}
+
+    input[type=checkbox] {
+        // visibility: hidden;
+        opacity: 0.4;
+
+    }
+}
+
+.custom-ckeckbox {
+    display: block;
+    position: absolute;
+    top: -20px;
+    .wh(16px, 16px);
+    background: red;
+
+}
+
+.checkbox-row {
+    position: relative;
+}
+
+.contact-form {
+    h3 {
+        color: #fff;
+        opacity: 0.9;
+        font-size: 31px;
+        .font-circularpro;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: @buttoncolor;
+        font-size: 16;
+        margin-bottom: 24px;
+    }
+}
+
+.form-label-ceckbox {
+    display: inline;
+}
