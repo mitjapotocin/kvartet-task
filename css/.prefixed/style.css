@@ -331,6 +331,145 @@ p {
 .align-left {
   text-align: left;
 }
+.slider-button {
+  width: 90px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #e6e6e6;
+  outline: none;
+  float: left;
+  cursor: pointer;
+}
+.slider-button:hover {
+  background: #a39382;
+}
+.slider-button img {
+  width: 16px;
+}
+@media only screen and (max-width:639px) {
+  .slider-button {
+    width: 60px;
+    height: 30px;
+  }
+  .slider-button img {
+    width: 10px;
+  }
+}
+.card-button {
+  visibility: hidden;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+@media only screen and (max-width:767px) {
+  .card-button {
+    width: 30px;
+    height: 30px;
+    margin-right: 11px;
+  }
+}
+.card-button-sign-base {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-button-sign-minus {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 1px;
+}
+.card-button-sign-vertical-line {
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 11px;
+}
+.card {
+  display: block;
+  float: right;
+  background: #f6f5f3;
+  position: relative;
+  width: 74%;
+  top: -64px;
+}
+@media only screen and (max-width:767px) {
+  .card {
+    top: -38px;
+  }
+}
+.card p {
+  font-size: 15px;
+}
+@media only screen and (max-width:767px) {
+  .card p {
+    font-size: 12px;
+  }
+}
+.card-header {
+  position: relative;
+  margin: 30px 20px 10px 20px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media only screen and (max-width:767px) {
+  .card-header {
+    margin: 9px;
+  }
+}
+.card-header h3 {
+  color: #3f3520;
+  float: left;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+@media only screen and (max-width:767px) {
+  .card-header h3 {
+    font-size: 17px;
+  }
+}
+.card-header:hover h3 {
+  text-decoration: underline;
+}
+.card-header:hover .card-button {
+  visibility: visible;
+}
+.card-opened .card-button-sign-vertical-line {
+  visibility: hidden;
+}
+.card-opened .card-text {
+  visibility: visible;
+  display: block;
+}
+.card-opened .card-button {
+  visibility: visible;
+}
+.card-text {
+  padding: 0px 20px 10px 20px;
+  display: none;
+  visibility: hidden;
+}
+@media only screen and (max-width:767px) {
+  .card-text {
+    padding: 0 9px 9px 9px;
+  }
+}
 header {
   position: relative;
   height: 91vh;
@@ -671,6 +810,7 @@ fieldset {
   transform: translate(-50%, -50%);
 }
 .rounded-button-base {
+  cursor: pointer;
   color: #fff;
   background: #a39382;
   border: none;
@@ -681,6 +821,7 @@ fieldset {
   outline: auto 3px #a39382;
 }
 .form-button {
+  cursor: pointer;
   color: #fff;
   background: #a39382;
   border: none;
@@ -704,6 +845,7 @@ fieldset {
 .contact-us-cta-button {
   display: none;
   visibility: hidden;
+  cursor: pointer;
   color: #fff;
   background: #a39382;
   border: none;
@@ -906,6 +1048,16 @@ nav {
 .slider-img {
   width: 100%;
 }
+.slider-nav {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width:767px) {
+  .slider-nav {
+    margin-bottom: 20px;
+  }
+}
 .slider-nav-heading {
   float: left;
   position: absolute;
@@ -925,32 +1077,6 @@ nav {
 .slider-nav-buttons {
   float: right;
 }
-.slider-button {
-  width: 90px;
-  height: 60px;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: #e6e6e6;
-  outline: none;
-  float: left;
-  cursor: pointer;
-}
-.slider-button:hover {
-  background: #a39382;
-}
-.slider-button img {
-  width: 16px;
-}
-@media only screen and (max-width:639px) {
-  .slider-button {
-    width: 60px;
-    height: 30px;
-  }
-  .slider-button img {
-    width: 10px;
-  }
-}
 .slick-disabled {
   cursor: default;
   background: #fff;
@@ -958,135 +1084,12 @@ nav {
 .slick-disabled:hover {
   background: #fff;
 }
-.slider-nav {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 30px;
-}
-@media only screen and (max-width:767px) {
-  .slider-nav {
-    margin-bottom: 20px;
-  }
-}
 .slick-element {
   margin-bottom: 20px;
 }
 @media only screen and (max-width:767px) {
   .slick-element {
     margin-bottom: -10px;
-  }
-}
-.card {
-  display: block;
-  float: right;
-  background: #f6f5f3;
-  position: relative;
-  width: 74%;
-  top: -64px;
-}
-@media only screen and (max-width:767px) {
-  .card {
-    top: -38px;
-  }
-}
-.card p {
-  font-size: 15px;
-}
-@media only screen and (max-width:767px) {
-  .card p {
-    font-size: 12px;
-  }
-}
-.card-header {
-  overflow: hidden;
-  padding-bottom: 10px;
-  cursor: pointer;
-  margin: 30px 20px 10px 20px;
-  position: relative;
-}
-@media only screen and (max-width:767px) {
-  .card-header {
-    margin: 9px;
-  }
-}
-.card-header h3 {
-  color: #3f3520;
-  float: left;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-}
-@media only screen and (max-width:767px) {
-  .card-header h3 {
-    font-size: 17px;
-  }
-}
-.card-header:hover h3 {
-  text-decoration: underline;
-}
-.card-header:hover .card-button {
-  visibility: visible;
-}
-.card-opened .card-button-sign-vertical-line {
-  visibility: hidden;
-}
-.card-opened .card-text {
-  visibility: visible;
-  display: block;
-}
-.card-opened .card-button {
-  visibility: visible;
-}
-.card-button {
-  visibility: hidden;
-  background: #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  border: none;
-  position: absolute;
-  right: 0;
-}
-@media only screen and (max-width:767px) {
-  .card-button {
-    width: 30px;
-    height: 30px;
-    margin-right: 11px;
-  }
-}
-.card-button-sign-base {
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.card-button-sign-minus {
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 11px;
-  height: 1px;
-}
-.card-button-sign-vertical-line {
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 11px;
-}
-.card-text {
-  padding: 0px 20px 10px 20px;
-  display: none;
-  visibility: hidden;
-}
-@media only screen and (max-width:767px) {
-  .card-text {
-    padding: 0 9px 9px 9px;
   }
 }
 .location-info-wrapper {

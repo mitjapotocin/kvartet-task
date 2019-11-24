@@ -1,3 +1,67 @@
-.btn {
+// Image slider button
 
+.slider-button {
+    .wh(90px, 60px);
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: @buttoncolor-lighter;
+    outline: none;
+    float: left;
+    cursor: pointer;
+
+    &:hover {
+        background: @buttoncolor;
+    }
+
+    img {
+        width: 16px;
+    }
+
+    @media @bp_max_640 {
+        .wh(60px, 30px);
+
+        img {
+            width: 10px;
+        }
+    }
+}
+
+// Card button 
+
+.card-button {
+    .invisible;
+    background: #fff;
+    border-radius: 50%;
+    .wh(40px, 40px);
+    // float: right;
+    border: none;
+    // position: relative;
+    position: absolute;
+    right: 0;
+
+    @media @bp_max_768 {
+        .wh(30px, 30px);
+        margin-right: 11px;
+    }
+}
+
+// A + or a - sign is shown centered inside of the button.
+
+.card-button-sign-base {
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate-center;
+}
+
+.card-button-sign-minus {
+    .card-button-sign-base;
+    .wh(11px, 1px);
+}
+
+.card-button-sign-vertical-line {
+    .card-button-sign-base;
+    .wh(1px, 11px);
 }

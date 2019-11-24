@@ -1,0 +1,89 @@
+// Cards have a hidden text, that can be shown,
+// by clicking on card-header.
+
+.card {
+    display: block;
+    float: right;
+    background: @backgroundcolor;
+    position: relative;
+    width: 74%;
+    top: -64px;
+
+    @media @bp_max_768 {
+        top: -38px;
+    }
+
+    p {
+        font-size: 15px;
+
+        @media @bp_max_768 {
+            font-size: 12px;
+        }
+    }
+}
+
+// On hover card header is underlined and a button with a +
+// sign is shown. When card is opened, button has a - sign.
+
+.card-header {
+    position: relative;
+    margin: 30px 20px 10px 20px;
+    padding-bottom: 10px;
+    .clearfix;
+    cursor: pointer;
+
+    @media @bp_max_768 {
+        margin: 9px
+    }
+}
+
+.card-header {
+    h3 {
+        color: @textgold;
+        float: left;
+        font-weight: 500;
+        .font-poppins;
+        font-size: 30px;
+
+        @media @bp_max_768 {
+            font-size: 17px;
+        }
+    }
+}
+
+.card-header {
+    &:hover {
+        h3 {
+            .underline
+        }
+
+        .card-button {
+            .visible
+        }
+    }
+}
+
+.card-opened {
+    .card-button-sign-vertical-line {
+        .invisible;
+    }
+
+    .card-text {
+        .visible;
+        display: block;
+    }
+
+    .card-button {
+        .visible;
+    }
+}
+
+.card-text {
+    padding: 0px 20px 10px 20px;
+
+    @media @bp_max_768 {
+        padding: 0 9px 9px 9px;
+    }
+
+    .hidden;
+}
