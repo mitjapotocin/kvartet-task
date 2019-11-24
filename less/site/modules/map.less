@@ -1,3 +1,8 @@
+// Map has an image and location pins positioned
+// over it (relative to the image). 
+// On smaller size screens map is scaled uot and goes out
+// of the viewport, this is achieved with negative margins. 
+
 .map {
     overflow: hidden;
     position: relative;
@@ -18,24 +23,6 @@
 .map img {
     display: block;
     width: 100%;
-    object-fit: cover;
-}
-
-
-.location-pin-base {
-    width: 58px;
-    height: auto;
-    position: absolute;
-    .translate(@x: -50%, @y: -50%);
-
-    @media @bp_max_850 {
-        width: 36px;
-    }
-
-    @media @bp_max_480 {
-        width: 25px;
-    }
-
 }
 
 .location-pin-main {
@@ -46,13 +33,16 @@
     .location-pin-base;
 
     &:hover {
-        .scale-pin
+        transform: translate(-50%, -50%) scale(1.15);
     }
 }
 
 .scale-pin {
     transform: translate(-50%, -50%) scale(1.15);
 }
+
+// Pin number is displayed in the center of the pin and hidden
+// on small screen sizes. 
 
 .pin-number {
     user-select: none;
@@ -82,53 +72,6 @@
     }
 }
 
-.location-info-wrapper {
-    width: 83%;
-    display: inline-flex;
-    margin-bottom: 65px;
-
-    @media @bp_max_768 {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    @media @bp_max_1024 {
-        display: inline-block;
-    }
-
-    @media @bp_max_1200 {}
-
-    &>* {
-        .align-left
-    }
-}
-
-.location-title {
-    flex: 1;
-}
-
-.location-info {
-    flex: 1;
-
-    p {
-        line-height: 1.4;
-        font-size: 19px;
-        font-family: 'Roboto', sans-serif;
-        color: @textgray;
-        padding-right: 22%;
-
-        @media @bp_max_768 {
-
-            font-size: 13px;
-        }
-
-        @media @bp_max_480 {
-            padding-right: 0;
-        }
-    }
-}
-
-
 .location {
     margin-bottom: 165px;
 
@@ -136,22 +79,6 @@
         margin-bottom: 40px;
     }
 }
-
-h2 {
-    margin-bottom: 5px;
-    line-height: 1.4;
-    font-size: 72px;
-    color: @textgold;
-
-    @media @bp_max_768 {
-        font-size: 48px;
-    }
-
-    @media @bp_max_480 {
-        font-size: 30px;
-    }
-}
-
 
 .location-name {
     cursor: default;

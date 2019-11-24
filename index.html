@@ -55,11 +55,9 @@
                 <img class="header-logo-bottom" src="images/svg/corwin logo.svg" alt="Corwin">
             </div>
         </div>
-
     </header>
-    <section>
+    <section id="location-info">
         <div class="container align-center">
-
             <div class="location-info-wrapper">
                 <div class="location-title">
                     <h2>Lokacija</h2>
@@ -79,10 +77,16 @@
             </div>
         </div>
     </section>
-    <section class="location">
+    <section id="location" class="location">
         <div class="container">
             <div class="map">
                 <img src="images/jpg/location-map.jpg" alt="map">
+
+                <!-- Insert location pins with inline style.            
+                 Position of the pin is relative to the image.
+                e.g. style="top: 0%; left: 0%;" is top left corner.
+                & style="top: 100%; left: 100%;" is bottom right.-->
+
                 <div>
                     <div class="location-pin" style="top: 50%; left: 50%;">
                         <img src="images/svg/location-pin.svg" alt="+">
@@ -109,6 +113,8 @@
                     </div>
                 </div>
 
+                <!-- Insert location names -->
+
                 <ul class="location-list">
                     <li class="location-name">1 Location</li>
                     <li class="location-name">2 Location</li>
@@ -120,103 +126,108 @@
             </div>
         </div>
     </section>
-    <section class="container">
-        <div class="slider-nav">
-            <div class="slider-nav-heading">
-                <h4>Corwinove zaveze</h4>
-            </div>
-            <div class="slider-nav-buttons">
-                <button class="slider-button prev"><img src="images/svg/arrow-l.svg" alt="Left"></button>
-                <button class="slider-button next"><img src="images/svg/arrow-r.svg" alt="Right"></button>
-            </div>
-        </div>
-        <div class="slider">
-            <div class="slick-element">
-                <div>
-                    <div>
-                        <img src="images/jpg/corwinove-zaveze-01.jpg" class="slider-img" alt="Segment">
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Segment 1</h3>
-                            <div class="card-button">
-                                <div class="card-button-sign-minus"></div>
-                                <div class="card-button-sign-vertical-line"></div>
-                            </div>
-                        </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
-                            diam rhoncus
-                        </p>
-                    </div>
+    <section id="image-carousel">
+        <div class="container">
+            <div class="slider-nav">
+                <div class="slider-nav-heading">
+                    <h4>Corwinove zaveze</h4>
+                </div>
+                <div class="slider-nav-buttons">
+                    <button class="slider-button prev"><img src="images/svg/arrow-l.svg" alt="Left"></button>
+                    <button class="slider-button next"><img src="images/svg/arrow-r.svg" alt="Right"></button>
                 </div>
             </div>
-            <div class="slick-element">
-                <div>
+            <div class="slider">
+                <div class="slick-element">
                     <div>
-                        <img src="images/jpg/corwinove-zaveze-02.jpg" class="slider-img" alt="Segment">
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Segment 1</h3>
-                            <div class="card-button">
-                                <div class="card-button-sign-minus"></div>
-                                <div class="card-button-sign-vertical-line"></div>
-                            </div>
+                        <div>
+                            <img src="images/jpg/corwinove-zaveze-01.jpg" class="slider-img" alt="Segment">
                         </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
-                            diam rhoncus
-                            vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam commodo,
-                            justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
-                            Integer
-                            volutpat turpis nisi.</p>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Segment 1</h3>
+                                <div class="card-button">
+                                    <div class="card-button-sign-minus"></div>
+                                    <div class="card-button-sign-vertical-line"></div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
+                                diam rhoncus
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slick-element">
-                <div>
+                <div class="slick-element">
                     <div>
-                        <img src="images/jpg/corwinove-zaveze-03.jpg" class="slider-img" alt="Segment">
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Segment 1</h3>
-                            <div class="card-button">
-                                <div class="card-button-sign-minus"></div>
-                                <div class="card-button-sign-vertical-line"></div>
-                            </div>
+                        <div>
+                            <img src="images/jpg/corwinove-zaveze-02.jpg" class="slider-img" alt="Segment">
                         </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
-                            diam rhoncus
-                            vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam commodo,
-                            justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
-                            Integer
-                            volutpat turpis nisi.</p>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Segment 1</h3>
+                                <div class="card-button">
+                                    <div class="card-button-sign-minus"></div>
+                                    <div class="card-button-sign-vertical-line"></div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
+                                diam rhoncus
+                                vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam
+                                commodo,
+                                justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
+                                Integer
+                                volutpat turpis nisi.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slick-element">
-                <div>
+                <div class="slick-element">
                     <div>
-                        <img src="images/jpg/corwinove-zaveze-04.jpg" class="slider-img" alt="Segment">
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Segment 1</h3>
-                            <div class="card-button">
-                                <div class="card-button-sign-minus"></div>
-                                <div class="card-button-sign-vertical-line"></div>
-                            </div>
+                        <div>
+                            <img src="images/jpg/corwinove-zaveze-03.jpg" class="slider-img" alt="Segment">
                         </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
-                            diam rhoncus
-                            vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam commodo,
-                            justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
-                            Integer
-                            volutpat turpis nisi.</p>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Segment 1</h3>
+                                <div class="card-button">
+                                    <div class="card-button-sign-minus"></div>
+                                    <div class="card-button-sign-vertical-line"></div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
+                                diam rhoncus
+                                vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam
+                                commodo,
+                                justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
+                                Integer
+                                volutpat turpis nisi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-element">
+                    <div>
+                        <div>
+                            <img src="images/jpg/corwinove-zaveze-04.jpg" class="slider-img" alt="Segment">
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Segment 1</h3>
+                                <div class="card-button">
+                                    <div class="card-button-sign-minus"></div>
+                                    <div class="card-button-sign-vertical-line"></div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque quis
+                                diam rhoncus
+                                vulputate. Suspendisse mollis augue neque, quis faucibus odio porttitor eget. Etiam
+                                commodo,
+                                justo a convallis lobortis, neque nunc tempor felis, in malesuada purus dolor vel arcu.
+                                Integer
+                                volutpat turpis nisi.</p>
+                        </div>
                     </div>
                 </div>
             </div>

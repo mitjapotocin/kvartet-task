@@ -1,0 +1,16 @@
+// Base properties for location pin 
+
+.location-pin-base {
+    width: 58px;
+    height: auto;
+    position: absolute;
+    .translate(@x: -50%, @y: -50%);
+
+    @media @bp_max_850 {
+        width: 36px;
+    }
+
+    @media @bp_max_480 {
+        width: 25px;
+    }
+}

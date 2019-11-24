@@ -265,6 +265,22 @@ textarea {
 .translate-center {
   transform: translate(-50%, -50%);
 }
+.location-pin-base {
+  width: 58px;
+  height: auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width:849px) {
+  .location-pin-base {
+    width: 36px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-pin-base {
+    width: 25px;
+  }
+}
 @font-face {
   font-family: CircularPro-Bold;
   src: url(../../font/CircularPro-Bold.otf);
@@ -791,23 +807,6 @@ nav {
 .map img {
   display: block;
   width: 100%;
-  object-fit: cover;
-}
-.location-pin-base {
-  width: 58px;
-  height: auto;
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-@media only screen and (max-width:849px) {
-  .location-pin-base {
-    width: 36px;
-  }
-}
-@media only screen and (max-width:479px) {
-  .location-pin-base {
-    width: 25px;
-  }
 }
 .location-pin-main {
   width: 58px;
@@ -877,70 +876,12 @@ nav {
     visibility: hidden;
   }
 }
-.location-info-wrapper {
-  width: 83%;
-  display: inline-flex;
-  margin-bottom: 65px;
-}
-@media only screen and (max-width:767px) {
-  .location-info-wrapper {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-}
-@media only screen and (max-width:1023px) {
-  .location-info-wrapper {
-    display: inline-block;
-  }
-}
-.location-info-wrapper > * {
-  text-align: left;
-}
-.location-title {
-  flex: 1;
-}
-.location-info {
-  flex: 1;
-}
-.location-info p {
-  line-height: 1.4;
-  font-size: 19px;
-  font-family: 'Roboto', sans-serif;
-  color: #616161;
-  padding-right: 22%;
-}
-@media only screen and (max-width:767px) {
-  .location-info p {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width:479px) {
-  .location-info p {
-    padding-right: 0;
-  }
-}
 .location {
   margin-bottom: 165px;
 }
 @media only screen and (max-width:767px) {
   .location {
     margin-bottom: 40px;
-  }
-}
-h2 {
-  margin-bottom: 5px;
-  line-height: 1.4;
-  font-size: 72px;
-  color: #3f3520;
-}
-@media only screen and (max-width:767px) {
-  h2 {
-    font-size: 48px;
-  }
-}
-@media only screen and (max-width:479px) {
-  h2 {
-    font-size: 30px;
   }
 }
 .location-name {
@@ -1146,6 +1087,64 @@ h2 {
 @media only screen and (max-width:767px) {
   .card-text {
     padding: 0 9px 9px 9px;
+  }
+}
+.location-info-wrapper {
+  display: inline-flex;
+  width: 83%;
+  margin-bottom: 65px;
+}
+@media only screen and (max-width:1023px) {
+  .location-info-wrapper {
+    display: block;
+  }
+}
+@media only screen and (max-width:767px) {
+  .location-info-wrapper {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.location-info-wrapper > * {
+  text-align: left;
+}
+.location-title {
+  flex: 1;
+}
+.location-title h2 {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-size: 72px;
+  color: #3f3520;
+}
+@media only screen and (max-width:767px) {
+  .location-title h2 {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-title h2 {
+    font-size: 30px;
+  }
+}
+.location-info {
+  flex: 1;
+}
+.location-info p {
+  line-height: 1.4;
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  color: #616161;
+  padding-right: 22%;
+}
+@media only screen and (max-width:767px) {
+  .location-info p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-info p {
+    padding-right: 0;
   }
 }
 .container {
