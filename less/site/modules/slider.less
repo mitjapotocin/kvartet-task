@@ -13,10 +13,10 @@
     display: flex;
 }
 
-// .slick-track .slick-slide {
-//     // display: flex;
-//     // height: auto;
-// }
+.slick-track .slick-slide {
+    display: flex;
+    height: auto;
+}
 
 
 .slider-img {
@@ -45,8 +45,22 @@
 }
 
 .slider-button {
-    cursor: pointer;
     .wh(90px, 60px);
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: @buttoncolor-lighter;
+    outline: none;
+    float: left;
+    cursor: pointer;
+
+    &:hover {
+        background: @buttoncolor;
+    }
+
+    img {
+        width: 16px;
+    }
 
     @media @bp_max_640 {
         .wh(60px, 30px);
@@ -56,20 +70,6 @@
         }
     }
 
-    padding: 0;
-    margin: 0;
-    border: none;
-    background-color: @buttoncolor-lighter;
-    outline: none;
-    float: left;
-
-    &:hover {
-        background: @buttoncolor;
-    }
-
-    img {
-        width: 16px;
-    }
 }
 
 
@@ -112,6 +112,7 @@
             font-size: 12px;
         }
     }
+
 }
 
 .card-header {

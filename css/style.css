@@ -932,6 +932,12 @@ h2 {
   display: -ms-flexbox;
   display: flex;
 }
+.slick-track .slick-slide {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
 .slider-img {
   width: 100%;
 }
@@ -955,7 +961,6 @@ h2 {
   float: right;
 }
 .slider-button {
-  cursor: pointer;
   width: 90px;
   height: 60px;
   padding: 0;
@@ -964,6 +969,13 @@ h2 {
   background-color: #e6e6e6;
   outline: none;
   float: left;
+  cursor: pointer;
+}
+.slider-button:hover {
+  background: #a39382;
+}
+.slider-button img {
+  width: 16px;
 }
 @media only screen and (max-width:639px) {
   .slider-button {
@@ -973,12 +985,6 @@ h2 {
   .slider-button img {
     width: 10px;
   }
-}
-.slider-button:hover {
-  background: #a39382;
-}
-.slider-button img {
-  width: 16px;
 }
 .slick-disabled {
   cursor: default;
