@@ -6,7 +6,8 @@ nav {
     color: #ffffff;
     position: absolute;
     z-index: 99;
-    @media @bp_max_640 {
+
+    @media @bp_max_680 {
         .hidden
     }
 }
@@ -19,6 +20,7 @@ nav ul li {
     font-size: 16px;
     float: left;
     margin-left: 24px;
+
     span {
         .margin-l-r(5px)
     }
@@ -28,8 +30,9 @@ nav ul li {
     display: block;
     float: left;
     opacity: 0;
+
     img {
-        margin-top:1px;
+        margin-top: 1px;
         display: block;
     }
 }
@@ -40,6 +43,7 @@ nav ul li {
     position: fixed;
     top: 0;
     background: @basecolor;
+
     .nav-logo {
         opacity: 1;
     }

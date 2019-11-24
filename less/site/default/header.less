@@ -70,12 +70,17 @@ header::before {
     top: 0;
     left: 0;
     background: @basecolor;
+    z-index: -4;
 
     img {
         padding: 55px 52px;
         width: 100%;
         height: auto;
         display: block;
+    }
+
+    @media (min-aspect-ratio: ~"8/5") and (max-height:640px) {
+        .hidden
     }
 
     @media @bp_max_768 {
