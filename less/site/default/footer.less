@@ -1,6 +1,10 @@
 footer {
     padding: 56px 0 31px 0;
     background: @basecolor;
+
+    @media @bp_max_768 {
+        padding-top: 29px;
+    }
 }
 
 .social {
@@ -8,15 +12,14 @@ footer {
 
         width: 45px;
         margin-right: 11px;
+        padding-top: 47px;
 
         @media @bp_max_768 {
             width: 34px;
-            margin-right: 16px;
-
+            padding-top: 22px
         }
     }
 
-    padding-top: 47px; //preveri
 }
 
 .form-label {
@@ -77,10 +80,6 @@ footer {
     grid-area: contact;
 }
 
-.contact-form {
-    grid-area: contact-form;
-}
-
 .footer-logo {
     grid-area: footer-logo;
     position: relative;
@@ -90,7 +89,7 @@ footer {
         bottom: 0%;
         right: 0%;
 
-        @media @bp_max_960 {
+        @media @bp_max_1200 {
             width: 133px;
 
         }
@@ -103,9 +102,9 @@ footer {
 
 .info-contact {
     display: grid;
-    grid-template-columns: 25% 37% 1fr;
+    grid-template-columns: 25% 32% 1fr;
 
-    @media @bp_max_960 {
+    @media @bp_max_1200 {
         grid-template-columns: 30% 47% 1fr;
     }
 
@@ -167,18 +166,28 @@ fieldset {
 
 
 .contact-form {
+    grid-area: contact-form;
+
     h3 {
         color: #fff;
         opacity: 0.9;
         font-size: 31px;
         .font-circularpro;
         margin-bottom: 15px;
+
+        @media @bp_max_480 {
+            font-size: 20px;
+        }
     }
 
     p {
         color: @buttoncolor;
         font-size: 16;
         margin-bottom: 24px;
+
+        @media @bp_max_480 {
+            font-size: 13;
+        }
     }
 }
 

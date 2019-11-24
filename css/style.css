@@ -333,7 +333,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 130px;
 }
 header a {
   text-decoration: inherit;
@@ -372,7 +372,7 @@ header h1 {
 }
 @media only screen and (max-width:767px) {
   header {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 }
 header::before {
@@ -418,29 +418,34 @@ header::before {
 }
 .header-logo-bottom {
   position: absolute;
-  bottom: 8%;
+  bottom: 6%;
+  width: 113px;
 }
 @media only screen and (max-width:767px) {
   .header-logo-bottom {
     margin-left: 16px;
-    margin-bottom: -5px;
+    bottom: 5%;
+    width: auto;
   }
 }
 footer {
   padding: 56px 0 31px 0;
   background: #173f35;
 }
-.social {
-  padding-top: 47px;
+@media only screen and (max-width:767px) {
+  footer {
+    padding-top: 29px;
+  }
 }
 .social img {
   width: 45px;
   margin-right: 11px;
+  padding-top: 47px;
 }
 @media only screen and (max-width:767px) {
   .social img {
     width: 34px;
-    margin-right: 16px;
+    padding-top: 22px;
   }
 }
 .form-label {
@@ -514,9 +519,6 @@ footer {
     font-size: 13px;
   }
 }
-.contact-form {
-  grid-area: contact-form;
-}
 .footer-logo {
   grid-area: footer-logo;
   position: relative;
@@ -526,7 +528,7 @@ footer {
   bottom: 0%;
   right: 0%;
 }
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1199px) {
   .footer-logo img {
     width: 133px;
   }
@@ -538,11 +540,11 @@ footer {
 }
 .info-contact {
   display: grid;
-  grid-template-columns: 25% 37% 1fr;
+  grid-template-columns: 25% 32% 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "contact contact-form footer-logo";
 }
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1199px) {
   .info-contact {
     grid-template-columns: 30% 47% 1fr;
   }
@@ -594,6 +596,9 @@ fieldset {
 .form-row input:focus {
   outline: auto 3px #a39382;
 }
+.contact-form {
+  grid-area: contact-form;
+}
 .contact-form h3 {
   color: #fff;
   opacity: 0.9;
@@ -601,10 +606,20 @@ fieldset {
   font-family: 'CircularPro-Bold';
   margin-bottom: 15px;
 }
+@media only screen and (max-width:479px) {
+  .contact-form h3 {
+    font-size: 20px;
+  }
+}
 .contact-form p {
   color: #a39382;
   font-size: 16;
   margin-bottom: 24px;
+}
+@media only screen and (max-width:479px) {
+  .contact-form p {
+    font-size: 13;
+  }
 }
 .checkbox-label {
   margin-left: 10px;
@@ -959,7 +974,7 @@ nav ul li span {
 }
 @media only screen and (max-width:767px) {
   .location {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 }
 h2 {
@@ -1060,6 +1075,11 @@ h2 {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
+}
+@media only screen and (max-width:767px) {
+  .slider-nav {
+    margin-bottom: 20px;
+  }
 }
 .slick-element {
   margin-bottom: 20px;

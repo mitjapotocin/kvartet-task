@@ -42,10 +42,10 @@ header {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 130px;
 
     @media @bp_max_768 {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
 
 }
@@ -92,11 +92,13 @@ header::before {
 
 .header-logo-bottom {
     position: absolute;
-    bottom: 8%;
+    bottom: 6%;
+    width: 113px;
 
     @media @bp_max_768 {
         margin-left: 16px;
-        margin-bottom: -5px;
+        bottom: 5%;
+        width: auto;
     }
 
 }
