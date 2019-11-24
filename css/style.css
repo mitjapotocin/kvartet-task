@@ -596,8 +596,8 @@ fieldset {
   position: relative;
   display: grid;
   grid-template-columns: 1fr min-content;
-  grid-gap: 14%;
-  gap: 14%;
+  grid-gap: 17%;
+  gap: 17%;
 }
 .input-field-checkbox {
   opacity: 0;
