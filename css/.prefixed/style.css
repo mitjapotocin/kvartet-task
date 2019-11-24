@@ -278,7 +278,6 @@ textarea {
   width: 58px;
   height: auto;
   position: absolute;
-  transform: translate(-50%, -50%);
 }
 @media only screen and (max-width:849px) {
   .location-pin-base {
@@ -862,7 +861,7 @@ nav {
   width: 58px;
   height: auto;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
 }
 @media only screen and (max-width:849px) {
   .location-pin-main {
