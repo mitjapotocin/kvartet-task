@@ -253,13 +253,6 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-.translate-center {
-  transform: translate(-50%, -50%);
-}
-@font-face {
-  font-family: CircularPro-Bold;
-  src: url(../../font/CircularPro-Bold.otf);
-}
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
@@ -268,6 +261,13 @@ textarea {
 }
 .font-circularpro {
   font-family: 'CircularPro-Bold';
+}
+.translate-center {
+  transform: translate(-50%, -50%);
+}
+@font-face {
+  font-family: CircularPro-Bold;
+  src: url(../../font/CircularPro-Bold.otf);
 }
 button,
 input,
@@ -316,35 +316,20 @@ p {
   text-align: left;
 }
 header {
+  position: relative;
   height: 91vh;
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
   background-position-y: top;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  position: relative;
   margin-bottom: 130px;
 }
-header a {
-  text-decoration: inherit;
-  color: inherit;
-  font-weight: 300;
-}
-header h3 {
-  font-weight: 300;
-  font-size: 28px;
-  color: #ffffff;
-}
 @media only screen and (max-width:767px) {
-  header h3 {
-    font-size: 22px;
-  }
-}
-@media only screen and (max-width:479px) {
-  header h3 {
-    font-size: 18px;
+  header {
+    margin-bottom: 40px;
   }
 }
 header h1 {
@@ -362,9 +347,19 @@ header h1 {
     font-size: 42px;
   }
 }
+header h3 {
+  font-weight: 300;
+  font-size: 28px;
+  color: #ffffff;
+}
 @media only screen and (max-width:767px) {
-  header {
-    margin-bottom: 40px;
+  header h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width:479px) {
+  header h3 {
+    font-size: 18px;
   }
 }
 header::before {
@@ -384,13 +379,6 @@ header::before {
   top: 0;
   left: 0;
   background: #173f35;
-  z-index: -4;
-}
-.header-big-logo img {
-  padding: 55px 52px;
-  width: 100%;
-  height: auto;
-  display: block;
 }
 @media (min-aspect-ratio: 8/5) and (max-height: 640px) {
   .header-big-logo {
@@ -403,6 +391,12 @@ header::before {
     transform: scale(0.625);
     transform-origin: top left;
   }
+}
+.header-big-logo img {
+  padding: 55px 52px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .header-logo-bottom {
   position: absolute;
@@ -754,6 +748,11 @@ nav ul li span {
 .nav-logo img {
   margin-top: 1px;
   display: block;
+}
+nav a {
+  text-decoration: inherit;
+  color: inherit;
+  font-weight: 300;
 }
 .nav-fixed {
   transition-property: background, opacity;

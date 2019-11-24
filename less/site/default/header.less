@@ -1,24 +1,26 @@
+//Header properties are set for a background phot.
+//Background-photo is injected in HTML
+
 header {
-    a {
-        text-decoration: inherit;
-        color: inherit;
-        font-weight: 300;
+    position: relative;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: top;
+    justify-content: center;
+    margin-bottom: 130px;
+
+    @media @bp_max_768 {
+        margin-bottom: 40px;
     }
+}
 
-    h3 {
-        font-weight: 300;
-        font-size: 28px;
-        color: #ffffff;
+//Heading
 
-        @media @bp_max_768 {
-            font-size: 22px;
-        }
-
-        @media @bp_max_480 {
-            font-size: 18px;
-        }
-    }
-
+header {
     h1 {
         font-size: 82px;
         color: #ffffff;
@@ -32,23 +34,26 @@ header {
             font-size: 42px;
         }
     }
-
-    height: 91vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: top;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 130px;
-
-    @media @bp_max_768 {
-        margin-bottom: 40px;
-    }
-
 }
+
+header {
+    h3 {
+        font-weight: 300;
+        font-size: 28px;
+        color: #ffffff;
+
+        @media @bp_max_768 {
+            font-size: 22px;
+        }
+
+        @media @bp_max_480 {
+            font-size: 18px;
+        }
+    }
+}
+
+// Two linear gradients positioned over the background photo,
+// to dim the photo.
 
 header::before {
     content: "";
@@ -62,23 +67,20 @@ header::before {
     width: 100%;
 }
 
+// Higher z-index, so the content is positioned over the linear gradients.
+
 .header-content {
     z-index: 1;
 }
+
+// Top left big logo, hides away, on wide and short screen sized, 
+// so it doesn't collide with header.
 
 .header-big-logo {
     position: absolute;
     top: 0;
     left: 0;
     background: @basecolor;
-    z-index: -4;
-
-    img {
-        padding: 55px 52px;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
 
     @media (min-aspect-ratio: ~"8/5") and (max-height:640px) {
         .hidden
@@ -88,7 +90,16 @@ header::before {
         .scale(0.625);
         transform-origin: top left;
     }
+
+    img {
+        padding: 55px 52px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 }
+
+//Bottom left logo
 
 .header-logo-bottom {
     position: absolute;
