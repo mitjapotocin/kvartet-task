@@ -449,28 +449,51 @@ footer {
 }
 .copyrights-credit {
   overflow: hidden;
+}
+.copyrights-credit-base {
   opacity: 0.6;
 }
-.copyrights-credit p {
+.copyrights-credit-base p {
   color: #fff;
   font-size: 14px;
 }
 @media only screen and (max-width:767px) {
-  .copyrights-credit p {
+  .copyrights-credit-base p {
     font-size: 9px;
   }
 }
 .copyrights {
+  opacity: 0.6;
   float: left;
+}
+.copyrights p {
+  color: #fff;
+  font-size: 14px;
+}
+@media only screen and (max-width:767px) {
+  .copyrights p {
+    font-size: 9px;
+  }
 }
 @media only screen and (max-width:767px) {
   .copyrights {
     float: none;
     margin-bottom: 8px;
+    opacity: 1;
   }
 }
 .credit {
+  opacity: 0.6;
   float: right;
+}
+.credit p {
+  color: #fff;
+  font-size: 14px;
+}
+@media only screen and (max-width:767px) {
+  .credit p {
+    font-size: 9px;
+  }
 }
 @media only screen and (max-width:767px) {
   .credit {
@@ -521,7 +544,7 @@ footer {
 }
 @media only screen and (max-width:959px) {
   .info-contact {
-    grid-template-columns: 33% 47% 1fr;
+    grid-template-columns: 30% 47% 1fr;
   }
 }
 @media only screen and (max-width:767px) {
@@ -646,15 +669,29 @@ fieldset {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.form-button {
-  border-radius: 25px;
-  width: 160px;
-  height: 50px;
+.rounded-button-base {
   color: #fff;
   background: #a39382;
   border: none;
   letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.rounded-button-base:focus {
+  outline: auto 3px #a39382;
+}
+.form-button {
+  color: #fff;
+  background: #a39382;
+  border: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
   font-size: 14px;
+  border-radius: 25px;
+}
+.form-button:focus {
+  outline: auto 3px #a39382;
 }
 @media only screen and (max-width:959px) {
   .form-button {
@@ -663,8 +700,33 @@ fieldset {
     border-radius: 20px;
   }
 }
-.form-button:focus {
+.contact-us-cta-button {
+  display: none;
+  visibility: hidden;
+  color: #fff;
+  background: #a39382;
+  border: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 153px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+.contact-us-cta-button:focus {
   outline: auto 3px #a39382;
+}
+@media only screen and (max-width:479px) {
+  .contact-us-cta-button {
+    visibility: visible;
+    display: block;
+  }
+}
+@media only screen and (max-width:479px) {
+  .footer-form {
+    display: none;
+    visibility: hidden;
+  }
 }
 nav {
   font-family: 'Poppins', sans-serif;

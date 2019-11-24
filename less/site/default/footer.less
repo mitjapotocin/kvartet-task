@@ -25,6 +25,11 @@ footer {
 
 .copyrights-credit {
     .clearfix;
+}
+
+//Basic copyrights and credits properties
+
+.copyrights-credit-base {
     opacity: 0.6;
 
     p {
@@ -35,23 +40,24 @@ footer {
             font-size: 9px;
         }
     }
-
 }
 
 .copyrights {
+    .copyrights-credit-base;
     float: left;
 
     @media @bp_max_768 {
         float: none;
         margin-bottom: 8px;
+        opacity: 1;
     }
 }
 
 .credit {
+    .copyrights-credit-base;
     float: right;
 
     @media @bp_max_768 {
-
         float: none;
     }
 }
@@ -100,7 +106,7 @@ footer {
     grid-template-columns: 25% 37% 1fr;
 
     @media @bp_max_960 {
-        grid-template-columns: 33% 47% 1fr;
+        grid-template-columns: 30% 47% 1fr;
     }
 
     grid-template-rows: 1fr;
@@ -247,23 +253,45 @@ fieldset {
     .translate(-50%, -50%);
 }
 
+.rounded-button-base {
+    color: #fff;
+    background: @buttoncolor;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: auto 3px @buttoncolor;
+    }
+}
+
 .form-button {
-    border-radius: 25px;
+    .rounded-button-base;
     .wh(160px, 50px);
+    font-size: 14px;
+    border-radius: 25px;
 
     @media @bp_max_960 {
         .wh(120px, 40px);
         border-radius: 20px;
     }
+}
 
-    color: #fff;
-    background: @buttoncolor;
-    border: none;
-    letter-spacing: 1px;
+.contact-us-cta-button {
+    .hidden;
+    .rounded-button-base;
+    .wh(153px, 40px);
+    border-radius: 20px;
+    font-size: 10px;
 
-    font-size: 14px;
+    @media @bp_max_480 {
+        .visible;
+        display: block;
+    }
+}
 
-    &:focus {
-        outline: auto 3px @buttoncolor;
+.footer-form {
+    @media @bp_max_480 {
+        .hidden
     }
 }
