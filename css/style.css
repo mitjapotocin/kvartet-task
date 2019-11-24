@@ -423,7 +423,7 @@ footer {
   background: #173f35;
 }
 .social {
-  padding-top: 23px;
+  padding-top: 47px;
 }
 .social img {
   width: 45px;
@@ -473,8 +473,10 @@ footer {
   grid-area: contact;
 }
 .contact p {
+  padding-right: 16px;
   color: #fff;
   opacity: 0.9;
+  font-weight: 200;
 }
 @media only screen and (max-width:767px) {
   .contact p {
@@ -509,10 +511,16 @@ footer {
   grid-template-rows: 1fr;
   grid-template-areas: "contact contact-form footer-logo";
 }
+@media only screen and (max-width:959px) {
+  .info-contact {
+    grid-template-columns: 33% 47% 1fr;
+  }
+}
 @media only screen and (max-width:767px) {
   .info-contact {
     grid-gap: 34px;
-    grid-template-columns: 1fr;
+    gap: 34px;
+    grid-template-columns: 74%;
     grid-template-rows: min-content min-content min-content;
     grid-template-areas: "contact-form" "contact" "footer-logo";
   }
@@ -569,37 +577,48 @@ fieldset {
 }
 .checkbox-label {
   margin-left: 10px;
-  display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #fff;
   opacity: 0.5;
-  vertical-align: top;
+  font-weight: 200;
 }
 .checkbox-row {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 22px;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-gap: 14%;
+  gap: 14%;
 }
-.checkbox-row input[type=checkbox]:checked + .custom-ckeckbox {
-  background: #a39382;
-}
-.checkbox-row input[type=checkbox]:checked + .custom-ckeckbox .custom-checkbox-image {
-  visibility: visible;
-}
-.checkbox-row input[type=checkbox] {
-  width: 13px;
-  height: 13px;
-  padding: 1px;
-  display: inline-block;
-  vertical-align: top;
+.input-field-checkbox {
+  opacity: 0;
   border: none;
   position: relative;
   top: 1px;
   left: 1px;
 }
-.checkbox-row input[type=checkbox]:focus {
+.input-field-checkbox:focus + .custom-ckeckbox {
   outline: auto 3px #a39382;
+}
+.input-field-checkbox:checked + .custom-ckeckbox {
+  background: #a39382;
+}
+.input-field-checkbox:checked + .custom-ckeckbox .custom-checkbox-image {
+  visibility: visible;
+}
+.form-label-checkbox {
+  position: relative;
+  top: 50%;
+}
+.checkbox-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 .custom-ckeckbox {
   position: absolute;
@@ -620,9 +639,6 @@ fieldset {
           transform: translate(-50%, -50%);
 }
 .form-button {
-  position: absolute;
-  top: 0%;
-  right: 0%;
   border-radius: 25px;
   width: 160px;
   height: 50px;

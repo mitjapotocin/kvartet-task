@@ -16,7 +16,7 @@ footer {
         }
     }
 
-    padding-top: 23px; //preveri
+    padding-top: 47px; //preveri
 }
 
 .form-label {
@@ -58,8 +58,10 @@ footer {
 
 .contact {
     p {
+        padding-right: 16px;
         color: #fff;
         opacity: 0.9;
+        font-weight: 200;
 
         @media @bp_max_768 {
             font-size: 13px;
@@ -93,18 +95,22 @@ footer {
     }
 }
 
-
-
 .info-contact {
     display: grid;
     grid-template-columns: 25% 37% 1fr;
+
+    @media @bp_max_960 {
+        grid-template-columns: 33% 47% 1fr;
+    }
+
+    grid-template-rows: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "contact contact-form footer-logo";
 
     @media @bp_max_768 {
-        //add row width 74%
         grid-gap: 34px;
-        grid-template-columns: 1fr;
+        gap: 34px;
+        grid-template-columns: 74%;
         grid-template-rows: min-content min-content min-content;
         grid-template-areas: "contact-form""contact""footer-logo";
 
@@ -173,43 +179,55 @@ fieldset {
 
 .checkbox-label {
     margin-left: 10px;
-    display: inline-block;
     .font-roboto;
     font-size: 13px;
     color: #fff;
     opacity: 0.5;
-    vertical-align: top;
-
+    font-weight: 200;
 }
 
 .checkbox-row {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 22px;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-gap: 14%;
+    gap: 14%;
+}
 
-    input[type=checkbox]:checked+.custom-ckeckbox {
+.input-field-checkbox {
+    opacity: 0;
+    border: none;
+    position: relative;
+    top: 1px;
+    left: 1px;
+
+    &:focus+.custom-ckeckbox {
+
+        //  box-shadow: 0 0 3px 1px $purple
+        outline: auto 3px @buttoncolor;
+        // outline: auto 8px red;
+    }
+
+    &:checked+.custom-ckeckbox {
         background: @buttoncolor;
 
         .custom-checkbox-image {
             visibility: visible;
         }
     }
+}
 
-    input[type=checkbox] {
-        .wh(13px, 13px);
-        padding: 1px;
-        display: inline-block;
-        vertical-align: top;
-        border: none;
-        position: relative;
-        top: 1px;
-        left: 1px;
+.form-label-checkbox {
+    position: relative;
+    top: 50%;
 
-        &:focus {
-            outline: auto 3px @buttoncolor;
-        }
-    }
+}
 
+.checkbox-wrapper {
+    display: flex;
+    transform: translate(0, -50%);
 }
 
 .custom-ckeckbox {
@@ -230,9 +248,6 @@ fieldset {
 }
 
 .form-button {
-    position: absolute;
-    top: 0%;
-    right: 0%;
     border-radius: 25px;
     .wh(160px, 50px);
 
