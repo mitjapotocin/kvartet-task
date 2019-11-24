@@ -852,11 +852,11 @@ nav ul li span {
 }
 @media only screen and (max-width:767px) {
   .location-info-wrapper {
-    margin-bottom: 40px;
     width: 100%;
+    margin-bottom: 40px;
   }
 }
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1023px) {
   .location-info-wrapper {
     display: inline-block;
   }
@@ -873,6 +873,23 @@ nav ul li span {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+.location-info p {
+  line-height: 1.4;
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  color: #616161;
+  padding-right: 22%;
+}
+@media only screen and (max-width:767px) {
+  .location-info p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .location-info p {
+    padding-right: 0;
+  }
 }
 .location {
   margin-bottom: 165px;
@@ -896,22 +913,6 @@ h2 {
 @media only screen and (max-width:479px) {
   h2 {
     font-size: 30px;
-  }
-}
-.location-info p {
-  line-height: 1.4;
-  font-size: 19px;
-  font-family: 'Roboto', sans-serif;
-  color: #616161;
-}
-@media only screen and (max-width:767px) {
-  .location-info p {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width:767px) {
-  .location-info p {
-    font-size: 13px;
   }
 }
 .location-name {

@@ -88,13 +88,15 @@
     margin-bottom: 65px;
 
     @media @bp_max_768 {
+        width: 100%;
         margin-bottom: 40px;
-        width: 100%
     }
 
-    @media @bp_max_960 {
+    @media @bp_max_1024 {
         display: inline-block;
     }
+
+    @media @bp_max_1200 {}
 
     &>* {
         .align-left
@@ -107,7 +109,25 @@
 
 .location-info {
     flex: 1;
+
+    p {
+        line-height: 1.4;
+        font-size: 19px;
+        font-family: 'Roboto', sans-serif;
+        color: @textgray;
+        padding-right: 22%;
+
+        @media @bp_max_768 {
+
+            font-size: 13px;
+        }
+
+        @media @bp_max_480 {
+            padding-right: 0;
+        }
+    }
 }
+
 
 .location {
     margin-bottom: 165px;
@@ -132,22 +152,6 @@ h2 {
     }
 }
 
-.location-info {
-    p {
-        line-height: 1.4;
-        font-size: 19px;
-        font-family: 'Roboto', sans-serif;
-        color: @textgray;
-
-        @media @bp_max_768 {
-            font-size: 16px;
-        }
-
-        @media @bp_max_768 {
-            font-size: 13px;
-        }
-    }
-}
 
 .location-name {
     cursor: default;
