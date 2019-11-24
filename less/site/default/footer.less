@@ -7,65 +7,37 @@ footer {
     }
 }
 
-.social {
-    img {
+// Contact, contact-form, footer-logo are displayed inline,
+// on smaller screens they are displayed vertically and they 
+// have a different order.
 
-        width: 45px;
-        margin-right: 11px;
-        padding-top: 47px;
+.info-contact {
+    display: grid;
+    grid-template-columns: 25% 32% 1fr;
+    grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "contact contact-form footer-logo";
 
-        @media @bp_max_768 {
-            width: 34px;
-            padding-top: 22px
-        }
+    @media @bp_max_1200 {
+        grid-template-columns: 33% 47% 1fr;
     }
 
-}
+    @media @bp_max_850 {
+        grid-gap: 34px;
+        gap: 34px;
+        grid-template-columns: 74%;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas: "contact-form""contact""footer-logo";
 
-.form-label {
-    .hidden
-}
-
-.copyrights-credit {
-    .clearfix;
-}
-
-//Basic copyrights and credits properties
-
-.copyrights-credit-base {
-    opacity: 0.6;
-
-    p {
-        color: #fff;
-        font-size: 14px;
-
-        @media @bp_max_768 {
-            font-size: 9px;
-        }
     }
 }
 
-.copyrights {
-    .copyrights-credit-base;
-    float: left;
 
-    @media @bp_max_768 {
-        float: none;
-        margin-bottom: 8px;
-        opacity: 1;
-    }
-}
-
-.credit {
-    .copyrights-credit-base;
-    float: right;
-
-    @media @bp_max_768 {
-        float: none;
-    }
-}
+// * contact
 
 .contact {
+    grid-area: contact;
+
     p {
         padding-right: 16px;
         color: #fff;
@@ -77,93 +49,23 @@ footer {
         }
     }
 
-    grid-area: contact;
 }
 
-.footer-logo {
-    grid-area: footer-logo;
-    position: relative;
-
+.social {
     img {
-        position: absolute;
-        bottom: 0%;
-        right: 0%;
-
-        @media @bp_max_1200 {
-            width: 133px;
-
-        }
+        width: 45px;
+        margin-right: 11px;
+        padding-top: 47px;
 
         @media @bp_max_768 {
-            position: static;
+            width: 34px;
+            padding-top: 22px
         }
     }
 }
 
-.info-contact {
-    display: grid;
-    grid-template-columns: 25% 32% 1fr;
 
-    @media @bp_max_1200 {
-        grid-template-columns: 30% 47% 1fr;
-    }
-
-    grid-template-rows: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "contact contact-form footer-logo";
-
-    @media @bp_max_768 {
-        grid-gap: 34px;
-        gap: 34px;
-        grid-template-columns: 74%;
-        grid-template-rows: min-content min-content min-content;
-        grid-template-areas: "contact-form""contact""footer-logo";
-
-    }
-}
-
-.copyrights-credit {
-    margin-top: 56;
-
-    @media @bp_max_768 {
-        margin-top: 40;
-    }
-}
-
-
-//form
-
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.form-row {
-    margin-bottom: 7px;
-    border-bottom: 1px solid #fff;
-
-    input {
-        width: 100%;
-        background: none;
-        border: none;
-        font-size: 16px;
-        padding: 11px 0 11px 0;
-        color: #fff;
-        .font-roboto;
-
-        &::placeholder {
-            opacity: 0.8;
-        }
-
-        &:focus {
-            outline: auto 3px @buttoncolor;
-        }
-    }
-
-}
-
-
+// * form
 
 .contact-form {
     grid-area: contact-form;
@@ -192,108 +94,34 @@ fieldset {
 }
 
 
-.checkbox-label {
-    margin-left: 10px;
-    .font-roboto;
-    font-size: 13px;
-    color: #fff;
-    opacity: 0.5;
-    font-weight: 200;
-}
+// * logo
 
-.checkbox-row {
-    width: 100%;
-    margin-top: 22px;
+.footer-logo {
+    grid-area: footer-logo;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    grid-gap: 17%;
-    gap: 17%;
-}
 
-.input-field-checkbox {
-    opacity: 0;
-    border: none;
-    position: relative;
-    top: 1px;
-    left: 1px;
+    img {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
 
-    &:focus+.custom-ckeckbox {
+        @media @bp_max_1200 {
+            width: 133px;
 
-        //  box-shadow: 0 0 3px 1px $purple
-        outline: auto 3px @buttoncolor;
-        // outline: auto 8px red;
-    }
+        }
 
-    &:checked+.custom-ckeckbox {
-        background: @buttoncolor;
-
-        .custom-checkbox-image {
-            visibility: visible;
+        @media @bp_max_850 {
+            position: static;
         }
     }
 }
 
-.form-label-checkbox {
-    position: relative;
-    top: 50%;
 
-}
+// On smaller size screens form is replaced with a
+// contact-us button. 
 
-.checkbox-wrapper {
-    display: flex;
-    transform: translate(0, -50%);
-}
-
-.custom-ckeckbox {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    .wh(15px, 15px);
-    border-radius: 2px;
-    background: white
-}
-
-.custom-checkbox-image {
-    visibility: hidden;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    .translate(-50%, -50%);
-}
-
-.rounded-button-base {
-    cursor: pointer;
-    color: #fff;
-    background: @buttoncolor;
-    border: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    &:focus {
-        outline: auto 3px @buttoncolor;
-    }
-}
-
-.form-button {
-    .rounded-button-base;
-    .wh(160px, 50px);
-    font-size: 14px;
-    border-radius: 25px;
-
-    @media @bp_max_960 {
-        .wh(120px, 40px);
-        border-radius: 20px;
-    }
-}
 
 .contact-us-cta-button {
-    .hidden;
-    .rounded-button-base;
-    .wh(153px, 40px);
-    border-radius: 20px;
-    font-size: 10px;
-
     @media @bp_max_480 {
         .visible;
         display: block;
@@ -303,5 +131,55 @@ fieldset {
 .footer-form {
     @media @bp_max_480 {
         .hidden
+    }
+}
+
+
+// Bottom of footer
+
+.copyrights-credit {
+    .clearfix;
+    margin-top: 56;
+
+    @media @bp_max_768 {
+        margin-top: 40;
+    }
+}
+
+//Basic copyrights and credits properties
+
+.copyrights-credit-base {
+    opacity: 0.6;
+
+    p {
+        color: #fff;
+        font-size: 14px;
+
+        @media @bp_max_768 {
+            font-size: 9px;
+        }
+    }
+}
+
+// On wider size screes copyrights and credit are displayed inline,
+// on smaller size screens they are aligned vertically.
+
+.copyrights {
+    .copyrights-credit-base;
+    float: left;
+
+    @media @bp_max_768 {
+        float: none;
+        margin-bottom: 8px;
+        opacity: 1;
+    }
+}
+
+.credit {
+    .copyrights-credit-base;
+    float: right;
+
+    @media @bp_max_768 {
+        float: none;
     }
 }

@@ -65,3 +65,41 @@
     .card-button-sign-base;
     .wh(1px, 11px);
 }
+
+// Footer buttons 
+
+.rounded-button-base {
+    cursor: pointer;
+    color: #fff;
+    background: @buttoncolor;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: auto 3px @buttoncolor;
+    }
+}
+
+.form-button {
+    .rounded-button-base;
+    .wh(160px, 50px);
+    font-size: 14px;
+    border-radius: 25px;
+
+    @media @bp_max_960 {
+        .wh(120px, 40px);
+        border-radius: 20px;
+    }
+}
+
+// On smaller size screens contact-us button is 
+// displayed instead of form. 
+
+.contact-us-cta-button {
+    .hidden;
+    .rounded-button-base;
+    .wh(153px, 40px);
+    border-radius: 20px;
+    font-size: 10px;
+}
