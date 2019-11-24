@@ -1,9 +1,9 @@
+// Nav hides on small devices. 
+
 nav {
-    font-family: 'Poppins', sans-serif;
     padding: 17px 0 17px 0;
     width: 100%;
     top: 35px;
-    color: #ffffff;
     position: absolute;
     z-index: 99;
 
@@ -12,19 +12,29 @@ nav {
     }
 }
 
-nav ul {
+.nav-elements {
     float: right;
-}
 
-nav ul li {
-    font-size: 16px;
-    float: left;
-    margin-left: 24px;
+    li {
+        float: left;
+        margin-left: 24px;
+        color: #ffffff;
+        .font-poppins;
+        font-size: 16px;
+        font-weight: 300;
 
-    span {
-        .margin-l-r(5px)
+        a {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        span {
+            .margin-l-r(5px)
+        }
     }
 }
+
+// Nav logo is transparent and is made visible, when scrolling down. 
 
 .nav-logo {
     display: block;
@@ -37,28 +47,19 @@ nav ul li {
     }
 }
 
-
-nav {
-    a {
-        text-decoration: inherit;
-        color: inherit;
-        font-weight: 300;
-    }
-}
+// This class is appended (with JS) to navigation,
+// when scrolled down 
 
 .nav-fixed {
-    transition-property: background, opacity;
+    transition-property: background;
     transition-duration: 0.4s;
     position: fixed;
     top: 0;
     background: @basecolor;
 
     .nav-logo {
+        transition-property: opacity;
+        transition-duration: 0.4s;
         opacity: 1;
     }
-}
-
-.nav-active {
-    border-bottom: 1px solid #ffffff;
-    z-index: 99;
 }

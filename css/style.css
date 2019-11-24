@@ -738,11 +738,9 @@ fieldset {
   }
 }
 nav {
-  font-family: 'Poppins', sans-serif;
   padding: 17px 0 17px 0;
   width: 100%;
   top: 35px;
-  color: #ffffff;
   position: absolute;
   z-index: 99;
 }
@@ -752,15 +750,22 @@ nav {
     visibility: hidden;
   }
 }
-nav ul {
+.nav-elements {
   float: right;
 }
-nav ul li {
-  font-size: 16px;
+.nav-elements li {
   float: left;
   margin-left: 24px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
-nav ul li span {
+.nav-elements li a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.nav-elements li span {
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -773,24 +778,17 @@ nav ul li span {
   margin-top: 1px;
   display: block;
 }
-nav a {
-  text-decoration: inherit;
-  color: inherit;
-  font-weight: 300;
-}
 .nav-fixed {
-  transition-property: background, opacity;
+  transition-property: background;
   transition-duration: 0.4s;
   position: fixed;
   top: 0;
   background: #173f35;
 }
 .nav-fixed .nav-logo {
+  transition-property: opacity;
+  transition-duration: 0.4s;
   opacity: 1;
-}
-.nav-active {
-  border-bottom: 1px solid #ffffff;
-  z-index: 99;
 }
 .map {
   overflow: hidden;
